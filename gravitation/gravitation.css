@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('stars.jpg');
+    background-position-y: 3vw;
+    background-size: 100% 87%;
+    background-repeat: no-repeat;
+}
+
+canvas {
+    position: absolute;
+    margin-top: 2vw;
+    left: 0%;
+    top: 0%;
+}
+
+.satellite {
+    font-size: 1vw;
+   float:left;
+    color: white;
+    width:45%;
+    height: 2vw;
+    margin-top: 40vw;
+}
+
+.planet {
+   float:left;
+   font-size: 1vw;
+    color: white;
+    width: 45%;
+    height: 2vw;
+    margin-left: 2vw;
+    margin-top:40vw;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    opacity: 0.3;
+}

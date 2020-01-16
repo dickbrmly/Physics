@@ -1,0 +1,30 @@
+﻿
+<head>
+    <link href="gravitation.css" rel="stylesheet" type="text/css">
+    <title>Gravitation</title>
+</head>
+<body>
+    <div>
+        <div style='text-align:left; float:left'>   <button class="button" onclick="startStop()">Run / Stop</button>   </div>
+        <div style='text-align:right'>   <button class="button" onclick="window.close()"> Close Window </button>   </div>
+        <canvas id='myCanvas' width='1915' height='800'>
+            Your browser does not support the canvas element.
+        </canvas>
+    </div>
+    <div class="row">
+
+        <div class='satellite' column='1'>
+            <h4 style="text-align:center">Moon</h4>
+            <span>&nbsp; Mass in kg</span><input id='massMeteor' type="number" value='7.342E22'>
+            <span>X/Y Velocity</span><input id='velosityMx' type='number' value='0'><span>ms</span>
+            <input id='velosityMy' type='number' value='1023'><span>ms</span>
+        </div>
+        <div class='planet' column='2'>
+            <h4 style="text-align:center">Planet</h4>
+            <span>&nbsp; Mass in kg</span><input id='massPlanet' type="number" value='6E24'>
+            <span>X/Y Velocity</span><input id='velosityPx' type='number' value='0'><span>ms</span>
+            <input id='velosityPy' type='number' value='0'><span>ms</span>
+        </div>
+    </div>
+    <script src="gravitation.js"></script>
+</body>

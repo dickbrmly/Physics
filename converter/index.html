@@ -1,0 +1,309 @@
+﻿<!--
+                                Conversion Utility
+                                 Date: 12/19/2019
+                              Author: Richard Bromley
+
+-->
+
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="converter.css">
+    <script src='distance.js'></script>
+    <script src='kenetic.js'></script>
+    <script src='volume.js'></script>
+    <script src='force.js'></script>
+
+
+</head>
+
+<style>
+
+    body {
+        background-image: url('gears.png');
+        background-size: 100% 120%;
+        background-repeat: no-repeat;
+    }
+</style>
+<!------------------------------------------------------------------------           Left column
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+
+<div id="rss" class="left" direction='up'>
+    <!-- start sw-rss-feed code -->
+    <script type="text/javascript">
+        rssfeed_url = new Array();
+        rssfeed_url[0] = "https://www.aljazeera.com/xml/rss/all.xml";
+        rssfeed_frame_width = "100%";
+        rssfeed_frame_height = "100%";
+        rssfeed_scroll = "on";
+        rssfeed_scroll_step = "20";
+        rssfeed_target = "_blank";
+        rssfeed_title = "on";
+        rssfeed_title_name = "<center><font color = 'gray'>  Al Jazeera English </font></center>";
+        rssfeed_item_title_color = "ghostwhite";
+        rssfeed_font_size = "18";
+        rssfeed_font_face = "font-family:'Times New Roman', Times, serif";
+        rssfeed_cache = "5966e44f2779d1bb41f0ee6f9c1c21dd";</script>
+    <script type="text/javascript" src="http://feed.surfing-waves.com/js/rss-feed.js"></script>
+    <div style="color:#ccc;font-size:10px; text-align:right; width:230px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div>
+</div>
+
+<div class="center">
+    <h1 style='text-align: center; color:ghostwhite'>Bromley Multi System Conversion Utility </h1>
+    <!------------------------------------------------------------------------           Distance Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class='distance'>
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Distance</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Miles</th>
+            <td class='column'><input type='number' id='miles' onkeypress="milesEntry(event)" value='0.00062137'></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Yards</th>
+            <td class='column'><input type='number' id="yards" onkeypress="yardsEntry(event)" value='1.0936133'></td>
+
+        <tr class='row'>
+            <th class='units'>Feet</th>
+            <td class='column'><input type='number' id="feet" onkeypress="feetEntry(event)" value='3.2808399'></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Inches</th>
+            <td class='column'><input type='number' id="inches" onkeypress="inchesEntry(event)" value='39.3700787'></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Kilometers</th>
+            <td class='column'><input type='number' id="kilometers" onkeypress="kilometersEntry(event)" value='0.001'></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Meters</th>
+            <td class='column'><input type='number' id="meters" onkeypress="metersEntry(event)" value='1'></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>centimeters</th>
+            <td class='column'><input type='number' id="centimeters" onkeypress="centimetersEntry(event)" value='100'></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>millimeters</th>
+            <td class='column'><input type='number' id="millimeters" onkeypress="millimetersEntry(event)" value='1000'></td>
+        </tr>
+    </table>
+    <!------------------------------------------------------------------------           Volume Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class="volume">
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Volume</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>liter</th>
+            <td class='column'><input type='number' id='liters' onkeypress="litersEntry(event)" value='0.00062137'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>gallon</th>
+            <td class='column'><input type='number' id="gallons" onkeypress="gallonsEntry(event)" value='1.0936133'> </td>
+
+        <tr class='row'>
+            <th class='units'>quart</th>
+            <td class='column'><input type='number' id="quarts" onkeypress="quartsEntry(event)" value='3.2808399'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>pint</th>
+            <td class='column'><input type='number' id="pints" onkeypress="pintsEntry(event)" value='39.3700787'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>cup</th>
+            <td class='column'><input type='number' id="cups" onkeypress="cupsEntry(event)" value='0.001'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>tablespoon</th>
+            <td class='column'><input type='number' id="tablespoons" onkeypress="tablespoonsEntry(event)" value='1'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>teaspoon</th>
+            <td class='column'><input type='number' id="teaspoons" onkeypress="teaspoonsEntry(event)" value='100'> </td>
+        </tr>
+    </table>
+    <!------------------------------------------------------------------------           Force Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class="force">
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Force</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Lbs</th>
+            <td class='column'><input type='number' id='lbs' onkeypress="lbsEntry(event)" value='0.224809'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Newtons</th>
+            <td class='column'><input type='number' id="newtons" onkeypress="newtonsEntry(event)" value='1'> </td>
+
+        <tr class='row'>
+            <th class='units'>Watts</th>
+            <td class='column'><input type='number' id="watts" onkeypress="wattsEntry(event)" value='1'> </td>
+        </tr>
+    </table>
+    <!------------------------------------------------------------------------           Kenetic Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class='kenetic'>
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Mass</strong></td>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Speed</strong></td>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Kenetic</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <td class='units'><strong>tons</strong></td>
+            <td class='column'><input type='number' id="tons" onkeypress='tonsEntry(event)' value='0.00110231131'> </td>
+            <td class='units'><strong>mph</strong></td>
+            <td class='column'><input type='number' id="milesPerHour" onkeypress='milesPerHourEntry(event)' value='2.23693629'> </td>
+            <td class='units'><strong>ft/lbs</strong></td>
+            <td id='footPounds' class='result'>0.73756</td>
+        </tr>
+
+        <tr class='row'>
+            <td class='units'><strong>lbs</strong></td>
+            <td class='column'><input type='number' id="pounds" onkeypress='poundsEntry(event)' value='2.20462262'> </td>
+            <td class='units'><strong>fpm</strong></td>
+            <td class='column'><input type='number' id="feetPerMinute" onkeypress='feetPerMinuteEntry(event)' value='196.8504'> </td>
+        </tr>
+
+        <tr class='row'>
+            <td class='units'><strong>ounces</strong></td>
+            <td class='column'><input type='number' id="ounces" onkeypress='ouncesEntry(event)' value='35.2739619'> </td>
+            <td class='units'><strong>fps</strong></td>
+            <td class='column'><input type='number' id="feetPerSecond" onkeypress='feetPerSecondEntry(event)' value='3.2808399'> </td>
+            <td class='units'><strong>inch/lbs</strong></td>
+            <td id='inchPounds' class='result'>8.85072</td>
+        </tr>
+
+        <tr class='row'>
+            <td class='units'><strong>Kg</strong></td>
+            <td class='column'><input type='number' id="kilograms" onkeypress='kilogramsEntry(event)' value='1'> </td>
+            <td class='units'><strong>kph</strong></td>
+            <td class='column'><input type='number' id="kilometersPerHour" onkeypress='kilometersPerHourEntry(event)' value='3.6'> </td>
+            <td class='units'></td>
+            <td class='column'></td>
+        </tr>
+
+        <tr class='row'>
+            <td class='units'><strong>grams</strong></td>
+            <td class='column'><input type='number' id="grams" onkeypress='gramsEntry(event)' value='1000'> </td>
+            <td class='units'><strong>mps</strong></td>
+            <td class='column'><input type='number' id='metersPerSecond' onkeypress='metersPerSecondEntry(event)' value='1'> </td>
+            <td class='units'><strong>Joules</strong></td>
+            <td id='joules' class='result'>0.5</td>
+        <tr>
+            <td colspan="5"><p style="color:aliceblue; text-align:center">Joules are in Newton-meters.</p></td>
+        </tr>
+    </table>
+    <!------------------------------------------------------------------------           Coordinate Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class="coordinate">
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle' colspan="2"><strong>Coordinate</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Polar</th>
+            <td class='column'><input type='number' id='radius' value='1.4142135623731'> </td>
+            <td class='column'><input type='number' id='angle' onkeypress="angleEntry(event)" value='45'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Rectangular</th>
+            <td class='column'><input type='number' id="xValue" value='1'></td>
+            <td class='column'><input type='number' id="yValue" onkeypress="yValueEntry(event)" value='1'></td>
+        <tr>
+            <td colspan="3"><p style="color:aliceblue; text-align:center">Hit enter after right side entry (degrees).</p></td>
+        </tr>
+    </table>
+    <!------------------------------------------------------------------------           Angle Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class="angle">
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Angle</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Degrees</th>
+            <td class='column'><input type='number' id='degrees' onkeypress="degreesEntry(event)" value='180'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Radians</th>
+            <td class='column'><input type='number' id="radians" onkeypress="radiansEntry(event)" value='3.1415926536'></td>
+
+        <tr class='row'>
+            <th class='units' style="font-size-adjust:1.58"> <big>&#8508; </big></th>
+            <td class='column'><input type='number' id="pi" onkeypress="piEntry(event)" value='1'></td>
+    </table>
+
+    <!------------------------------------------------------------------------           Force Table
+        -
+        --
+    ---------------------------------------------------------------------------------------------------->
+    <table class="temperature">
+        <tr class='row'>
+            <th class='columnUnits'><strong>Units</strong></th>
+            <td class='columnTitle'><strong>Temperature</strong></td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Fahrenheit</th>
+            <td class='column'><input type='number' id='fahrenheit' onkeypress="fahrenheitEntry(event)" value='32'> </td>
+        </tr>
+
+        <tr class='row'>
+            <th class='units'>Celsius</th>
+            <td class='column'><input type='number' id="celsius" onkeypress="celsiusEntry(event)" value='0'> </td>
+
+        <tr class='row'>
+            <th class='units'>Kelven</th>
+            <td class='column'><input type='number' id="kelven" onkeypress="kelvenEntry(event)" value='273.15'> </td>
+        </tr>
+    </table>
+
+    <p> <button type="button" onclick="  window.close()">Close Window</button> </p>
+</div>
+<div class="right">
+    <p>How about now?</p>
+</div>
+

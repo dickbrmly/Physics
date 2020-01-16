@@ -1,0 +1,14 @@
+{
+  "name": "physics",
+  "version": "1.0.0",
+  "description": "Physics Website",
+  "main": "server.js",
+  "author": {
+    "name": "Richard Bromley"
+  },
+  "dependencies": {
+    "@google-cloud/logging-winston": "^3.0.4",
+    "dotenv": "^8.2.0",
+    "winston": "^3.2.1"
+  }
+}
