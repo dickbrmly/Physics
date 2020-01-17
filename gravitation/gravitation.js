@@ -33,23 +33,7 @@ class item {
 }
 
 function gravitate() {
-    if (flag === false) {
-        ctx.font = "18px Times Newroman";
-
-        ctx.fillText("The gravitational constant is set to 1 and the distances adjusted to have a day's travel occur every half", 1100, 50);
-        ctx.fillText("second.", 1100, 70);
-        ctx.fillText("Both bodies are under gravitational force toward one another.  The planet has the mass equal to earth", 1100, 100);
-        ctx.fillText("and the moon is equal to our moon. The velocity in meters per second is close to our moon's velocity", 1100, 120);
-        ctx.fillText("and  mass is adjustable.   Reloading the page will reset values. The  Run / Stop  button will reset the", 1100, 140);
-        ctx.fillText("objects to the start  positions.  Another interesting condition is setting the moon to the  earth's  mass ", 1100, 160);
-        ctx.fillText("and giving a velocity of  (0,650) and the planet a velocity of (0,-650)", 1100, 180);
-        var img = new Image();
-        img.src = 'equations.jpg';
-        img.onload = function () {
-            ctx.drawImage(img, 1200, 200);
-        };
-        return;
-    }
+    if (flag === false) return;
     var distance = 100000000000 * Math.sqrt(Math.pow(parseFloat(planet.x) - parseFloat(meteor.x), 2) + Math.pow(parseFloat(planet.y) - parseFloat(meteor.y), 2));
     var angle = Math.atan2(meteor.y - planet.y, planet.x - meteor.x);
     var force = parseFloat(planet.mass) * parseFloat(meteor.mass) / Math.pow(parseFloat(distance), 2);
@@ -60,7 +44,7 @@ function gravitate() {
 
     var meteorAccel = force / parseFloat(meteor.mass);
 
-    ctx.clearRect(0, 0, 1915, 935);
+    ctx.clearRect(0, 0, 800, 600);
     meteor.move(parseFloat(meteor.x) + parseFloat(meteor.velocity.xSpeed), parseFloat(meteor.y) + parseFloat(meteor.velocity.ySpeed));
     planet.move(parseFloat(planet.x) + parseFloat(planet.velocity.xSpeed), parseFloat(planet.y) + parseFloat(planet.velocity.ySpeed));
 
@@ -70,15 +54,15 @@ function gravitate() {
     document.getElementById('velosityPy').value = planet.velocity.ySpeed * -648;
 
     if (distance <= [planet.radius + meteor.radius]) {
-        ctx.clearRect(0, 0, 1915, 935);
+        ctx.clearRect(0, 0, 800, 600);
         planet.move(parseFloat(planet.x) + parseFloat(planet.velocity.xSpeed), parseFloat(planet.y) + parseFloat(planet.velocity.ySpeed));
         window.cancelAnimationFrame(requestId);
     }
     else requestAnimationFrame(gravitate);
 }
 
-var meteor = new item(1300, 350, '#662200', document.getElementById('massMeteor').value, { xSpeed: document.getElementById('velosityMx').value, ySpeed: document.getElementById('velosityMy').value * -1.0 });
-var planet = new item(1060, 350, '#0000FF', document.getElementById('massPlanet').value, { xSpeed: document.getElementById('velosityPx').value, ySpeed: document.getElementById('velosityPy').value * -1.0 });
+var meteor = new item(600, 300, '#662200', document.getElementById('massMeteor').value, { xSpeed: document.getElementById('velosityMx').value, ySpeed: document.getElementById('velosityMy').value * -1.0 });
+var planet = new item(400, 300, '#0000FF', document.getElementById('massPlanet').value, { xSpeed: document.getElementById('velosityPx').value, ySpeed: document.getElementById('velosityPy').value * -1.0 });
 gravitate();
 
 function startStop() {
@@ -95,9 +79,9 @@ function startStop() {
     planet.mass = document.getElementById('massPlanet').value;
     planet.radius = Math.pow(parseFloat(planet.mass) / 1E21, 1 / 3);
 
-    meteor.x = 1300;
-    meteor.y = 350;
-    planet.x = 1060;
-    planet.y = 350;
+    meteor.x = 600;
+    meteor.y = 300;
+    planet.x = 400;
+    planet.y = 300;
     gravitate();
 }

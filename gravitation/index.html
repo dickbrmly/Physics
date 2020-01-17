@@ -4,27 +4,59 @@
     <title>Gravitation</title>
 </head>
 <body>
-    <div>
-        <div style='text-align:left; float:left'>   <button class="button" onclick="startStop()">Run / Stop</button>   </div>
-        <div style='text-align:right'>   <button class="button" onclick="window.close()"> Close Window </button>   </div>
-        <canvas id='myCanvas' width='1915' height='800'>
+    <div class="left">
+        <!-- start sw-rss-feed code -->
+        <script type="text/javascript">
+            rssfeed_url = new Array();
+            rssfeed_url[0] = "https://www.aljazeera.com/xml/rss/all.xml";
+            rssfeed_frame_width = "77%";
+            rssfeed_frame_height = "100%";
+            rssfeed_scroll = "on";
+            rssfeed_scroll_step = "20";
+            rssfeed_target = "_blank";
+            rssfeed_title = "on";
+            rssfeed_title_name = "<center><font color = 'gray'>  Al Jazeera English </font></center>";
+            rssfeed_item_title_color = "ghostwhite";
+            rssfeed_font_size = "14";
+            rssfeed_font = "font-family:Archivo Narrow, Archivo Narrow, Archivo Narrow;";
+            rssfeed_cache = "5966e44f2779d1bb41f0ee6f9c1c21dd";
+        </script>
+        <script type="text/javascript" src="http://feed.surfing-waves.com/js/rss-feed.js"></script>
+        <div style="color:#ccc;font-size:10px; text-align:right; width:230px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div>
+    </div>
+
+        <canvas id='myCanvas' width='800' height='600'>
             Your browser does not support the canvas element.
         </canvas>
-    </div>
-    <div class="row">
 
-        <div class='satellite' column='1'>
-            <h4 style="text-align:center">Moon</h4>
-            <span>&nbsp; Mass in kg</span><input id='massMeteor' type="number" value='7.342E22'>
-            <span>X/Y Velocity</span><input id='velosityMx' type='number' value='0'><span>ms</span>
-            <input id='velosityMy' type='number' value='1023'><span>ms</span>
+
+        <div class="row">
+            <div class='satellite' column='1'>
+                <h4 style="text-align:center">Moon</h4>
+                <span>&nbsp; Mass in kg</span><input id='massMeteor' type="number" value='7.342E22'><br />
+                <span>X/Y Velocity</span><input id='velosityMx' type='number' value='0'><span>ms</span>
+                <input id='velosityMy' type='number' value='1023'><span>ms</span>
+            </div>
+            <div class='planet' column='2'>
+                <h4 style="text-align:center">Planet</h4>
+                <span>&nbsp; Mass in kg</span><input id='massPlanet' type="number" value='6E24'><br />
+                <span>X/Y Velocity</span><input id='velosityPx' type='number' value='0'><span>ms</span>
+                <input id='velosityPy' type='number' value='0'><span>ms</span>
+            </div>
         </div>
-        <div class='planet' column='2'>
-            <h4 style="text-align:center">Planet</h4>
-            <span>&nbsp; Mass in kg</span><input id='massPlanet' type="number" value='6E24'>
-            <span>X/Y Velocity</span><input id='velosityPx' type='number' value='0'><span>ms</span>
-            <input id='velosityPy' type='number' value='0'><span>ms</span>
+
+        <div class="right">
+            <button class="button" onclick="startStop()">Run / Stop</button>
+            <button class="button" onclick="window.close()"> Close Window </button>
+            <p style="font-size:16px">The gravitational constant is set to 1 and the distances are adjusted to have a day's travel occur every half second. <br /><br />
+            Both bodies are under gravitational force toward one another.  The planet has the mass equal to earth and the moon 
+            is equal to our moon. <br /><br />The velocity in meters-per-second is close to our moon's velocity.  Both mass and velocity
+            are adjustable for both bodies. Reloading the page will reset values.<br /><br /> The  Run / Stop  button will reset the objects to the 
+            start position.  <br /><br />Another interesting condition is setting the moon to the  earth's  mass and giving a velocity of  (0,750) and the planet 
+            a velocity of (0,-750).
+            </p>
+
         </div>
-    </div>
+
     <script src="gravitation.js"></script>
 </body>

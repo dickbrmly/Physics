@@ -6,7 +6,7 @@
     This program takes one of seven volume quantities modified by a user within an HTML and determines the value of the other six measuring 
 systems on the HTML document.
 */
-const LITERS = 1; const GALLONS = 2; const QUARTS = 3; const PINTS = 4; const CUPS = 5; const TABLESPOONS = 6; const TEASPOONS = 7;
+const LITERS = 1; const MILILITERS = 2; const GALLONS = 3; const QUARTS = 4; const PINTS = 5; const CUPS = 6; const OUNCES = 7; const TABLESPOONS = 8; const TEASPOONS = 9; const GRAMS = 10;
 
 function litersEntry(event) {
     var x = event.which || event.keyCode;
@@ -14,6 +14,11 @@ function litersEntry(event) {
     update(LITERS);
 }
 
+function mililitersEntry(event) {
+    var x = event.which || event.keyCode;
+    if (x !== 13) return;
+    update(MILILITERS);
+}
 function gallonsEntry(event) {
     var x = event.which || event.keyCode;
     if (x !== 13) return;
@@ -38,6 +43,12 @@ function cupsEntry(event) {
     update(CUPS);
 }
 
+function ouncesEntry(event) {
+    var x = event.which || event.keyCode;
+    if (x !== 13) return;
+    update(OUNCES);
+}
+
 function tablespoonsEntry(event) {
     var x = event.which || event.keyCode;
     if (x !== 13) return;
@@ -50,20 +61,34 @@ function teaspoonsEntry(event) {
     update(TEASPOONS);
 }
 
+function gramsEntry(event) {
+    var x = event.which || event.keyCode;
+    if (x !== 13) return;
+    update(GRAMS);
+}
+
+
 function update(location) {
    
     var count = 0;
 
     do {
         switch (location) {
-            case TEASPOONS:
-                document.getElementById('liters').value = document.getElementById('teaspoons').value *  0.00492892;
+
+            case GRAMS:
+                document.getElementById('liters').value = document.getElementById('grams').value / 1000;
                 location = LITERS;
                 count++;
                 break;
         
             case LITERS:
-                document.getElementById('gallons').value = document.getElementById('liters').value * 0.264172058;
+                document.getElementById('mililiters').value = document.getElementById('liters').value * 1000;
+                location++;
+                count++;
+                break;
+
+            case MILILITERS:
+                document.getElementById('gallons').value = document.getElementById('mililiters').value * 0.00026417217685798896288645087322113;
                 location++;
                 count++;
                 break;
@@ -87,7 +112,13 @@ function update(location) {
                 break;
 
             case CUPS:
-                document.getElementById('tablespoons').value = document.getElementById('cups').value * 16;
+                document.getElementById('ounces').value = document.getElementById('cups').value * 8;
+                location++;
+                count++;
+                break;
+
+            case OUNCES:
+                document.getElementById('tablespoons').value = document.getElementById('ounces').value * 2;
                 location++;
                 count++;
                 break;
@@ -97,6 +128,12 @@ function update(location) {
                 location++;
                 count++;
                 break;
+
+            case TEASPOONS:
+                document.getElementById('grams').value = document.getElementById('teaspoons').value * 4.928921594;
+                location++;
+                count++;
+                break;
         }
-    } while(count < 6);
+    } while(count < 9);
 }

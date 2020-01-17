@@ -2,32 +2,55 @@ body {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url('stars.jpg');
-    background-position-y: 3vw;
-    background-size: 100% 87%;
+   background-position-x: 42%;
+   background-position-y: 25%;
+    background-size: 800px 600px;
     background-repeat: no-repeat;
 }
 
-canvas {
+.left, .right {
+    margin-top: 0;
+    height: 47vw;
+    font-size: 1vw;
+}
+
+.left {
+    color: white;
+    border-right: 5px solid black;
+    float: left;
+    width: 21%;
+}
+
+.right {
+    color: white;
+    border-left: 5px solid black;
+    float: right;
+    margin-right: 0%;
+    width: 20%;
+}
+
+    canvas {
+        border-color:white;
+        border-style:double;
     position: absolute;
-    margin-top: 2vw;
-    left: 0%;
-    top: 0%;
+    left: 25%;
+    top: 10%;
 }
 
 .satellite {
-    font-size: 1vw;
+    font-size: 0.4vw;
    float:left;
     color: white;
-    width:45%;
+    width:25%;
     height: 2vw;
     margin-top: 40vw;
 }
 
 .planet {
    float:left;
-   font-size: 1vw;
+   font-size: 0.4vw;
     color: white;
-    width: 45%;
+    width: 25%;
     height: 2vw;
     margin-left: 2vw;
     margin-top:40vw;
@@ -35,13 +58,14 @@ canvas {
 
 .button {
     background-color: #4CAF50; /* Green */
+    margin-left: 15%;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .button:hover {
