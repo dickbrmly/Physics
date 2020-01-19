@@ -16,7 +16,7 @@
 
 .center {
      text-shadow: 3px 2px black;
-    margin-left: 1%;
+    margin-left: 0%;
     float: left;
     width: 68%;
 }
@@ -67,9 +67,7 @@ table, th, td {
 }
 button {
     position:absolute;
-    top:95%;
-    width:69%;
-   left:15.5%;
+   left:75.5%;
     background-color: black;
     color: white;
     padding: 0.5vw 0.5vw;

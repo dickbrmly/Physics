@@ -9,14 +9,16 @@
  * Author: Richard Bromley
  *******************************************************************************************************-->
 <!doctype html>
-<title>Bromley solutions</title>
+<title>Interactive Physics</title>
 <link href="index.css" rel="stylesheet" type="text/css">
 <script src="bromleySolutions.js"></script>
 
 <style>
     body {
-        background-image: url('background.jpg');
-        background-size: 100% 105%;
+        background-color:black;
+        background-image: url('homePage.jpg');
+        background-size: 67% 110%;
+        background-position-x:50%;
         background-repeat: no-repeat;
     }
 </style>
@@ -50,16 +52,13 @@
         }
 
         table {
-            margin-top: 10%;
-            margin-left: 10%;
             border-collapse: separate;
             border-spacing: 5vw;
-            width: 60%;
-            height: 60%;
+            width: 100%;
+            height: 90%;
         }
 
         th, td {
-            background-color: rgb(36, 32, 35);
             color: white;
             height: 1.2vw;
         }
@@ -68,16 +67,18 @@
     <div class="center">
         <table id='table' class='table'>
             <tr>
-                <th id="conversions" class="cellBorder">Conversion</th>
-                <th id="elastic" class="cellBorder">Elastic Collision</th>
-                <th id="gravitation" class="cellBorder">Gravitation</th>
+                <th id="conversions" class="cellBorder"><img src="conversion.jpg"></th>
+                <th id="elastic" class="cellBorder"><img src="elastic.jpg"></th>
+                <th id="gravitation" class="cellBorder"><img src="gravitation.jpg"></th>
             </tr>
             <tr>
-                <th id="recipes" class="cellBorder">Ballistics</th>
-                <th id="dietary" class="cellBorder">electric Circuit</th>
-                <th id="stocks" class="cellBorder">Magnetic Circuit</th>
+                <th id="recipes" class="cellBorder"><img src="ballistics.jpg"></th>
+                <th id="dietary" class="cellBorder"><img src="electric.jpg"></th>
+                <th id="stocks" class="cellBorder"><img src="magnetic.jpg"></th>
             </tr>
         </table>
+        <span style="margin-left:80%">Artist </span><a href="mailto:webmaster@example.com">Margaret Hernandez</a>
+        <span style="margin-left:81%">Creator </span><a href="mailto:webmaster@example.com">Richard Bromley</a>
     </div>
 
     <div class="right">
