@@ -30,15 +30,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="converter\converter.css" />
-    <Content Include="converter\distance.js">
+    <Content Include="converter\converter.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="converter\force.js" />
     <Content Include="converter\gears.png" />
     <Content Include="converter\index.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="converter\kenetic.js" />
     <Content Include="converter\volume.js" />
     <Content Include="elastic\elastic.css" />
     <Content Include="elastic\elastic.html" />
