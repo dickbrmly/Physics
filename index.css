@@ -25,7 +25,7 @@ img {
 }
 
 .left {
-    color: white;
+    color: black;
     border-right: 5px solid black;
     float: left;
     width: 15%;
@@ -39,7 +39,7 @@ img {
 }
 
 .right {
-    color: white;
+    color: black;
     border-left: 5px solid black;
     float: right;
     margin-right: 0%;
