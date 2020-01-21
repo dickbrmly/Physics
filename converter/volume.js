@@ -6,7 +6,7 @@
     This program takes one of seven volume quantities modified by a user within an HTML and determines the value of the other six measuring 
 systems on the HTML document.
 */
-const LITERS = 1; const MILILITERS = 2; const GALLONS = 3; const QUARTS = 4; const PINTS = 5; const CUPS = 6; const OUNCES = 7; const TABLESPOONS = 8; const TEASPOONS = 9; const GRAMS = 10;
+const LITERS = 1; const MILILITERS = 2; const GALLONS = 3; const QUARTS = 4; const PINTS = 5; const CUPS = 6; const OUNCE = 7; const TABLESPOONS = 8; const TEASPOONS = 9; const GRAM = 10;
 
 function litersEntry(event) {
     var x = event.which || event.keyCode;
@@ -43,10 +43,10 @@ function cupsEntry(event) {
     update(CUPS);
 }
 
-function ouncesEntry(event) {
+function ounceEntry(event) {
     var x = event.which || event.keyCode;
     if (x !== 13) return;
-    update(OUNCES);
+    update(OUNCE);
 }
 
 function tablespoonsEntry(event) {
@@ -61,10 +61,10 @@ function teaspoonsEntry(event) {
     update(TEASPOONS);
 }
 
-function gramsEntry(event) {
+function gramEntry(event) {
     var x = event.which || event.keyCode;
     if (x !== 13) return;
-    update(GRAMS);
+    update(GRAM);
 }
 
 
@@ -75,8 +75,8 @@ function update(location) {
     do {
         switch (location) {
 
-            case GRAMS:
-                document.getElementById('liters').value = document.getElementById('grams').value / 1000;
+            case GRAM:
+                document.getElementById('liters').value = document.getElementById('gram').value / 1000;
                 location = LITERS;
                 count++;
                 break;
@@ -112,13 +112,13 @@ function update(location) {
                 break;
 
             case CUPS:
-                document.getElementById('ounces').value = document.getElementById('cups').value * 8;
+                document.getElementById('ounce').value = document.getElementById('cups').value * 8;
                 location++;
                 count++;
                 break;
 
-            case OUNCES:
-                document.getElementById('tablespoons').value = document.getElementById('ounces').value * 2;
+            case OUNCE:
+                document.getElementById('tablespoons').value = document.getElementById('ounce').value * 2;
                 location++;
                 count++;
                 break;
@@ -130,7 +130,7 @@ function update(location) {
                 break;
 
             case TEASPOONS:
-                document.getElementById('grams').value = document.getElementById('teaspoons').value * 4.928921594;
+                document.getElementById('gram').value = document.getElementById('teaspoons').value * 4.928921594;
                 location++;
                 count++;
                 break;
