@@ -14,16 +14,6 @@
 
 // When the user clicks anywhere outside of the modal, close it
 
-function grabLogin()
-{
-    document.getElementById('login').style.display = 'block';
-}
-
-function newUser()
-{
-    window.open('/newUser/createUser.html', "_blank", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=800, height=625");
-}
-
 function startConversions() {
     window.open("/converter/index.html");
 }
@@ -34,6 +24,18 @@ function startElastic() {
 
 function startGravitation() {
     window.open("/gravitation/index.html");
+}
+
+function startBallistics() {
+    window.open("/ballistics/index.html");
+}
+
+function startElectric() {
+    window.open("/electric/index.html");
+}
+
+function startMagnetic() {
+    window.open("/magnetic/index.html");
 }
 
 function closeWin() {

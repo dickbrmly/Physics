@@ -1,6 +1,6 @@
 /* Bromley Solutions
  ==========================================================================
-    Elastic CSS
+    Main Bromley page
 
     Programmer: Richard Bromley
  ========================================================================== */
@@ -13,34 +13,34 @@ body {
     background-color: black;
     height: 48vw;
     border-right: 5px solid black;
-    float:left;
-    width:12%;
+    float: left;
+    width: 12%;
     font-size: 1vw;
 }
 
 .farRight {
     margin-left: 3vw;
-    float:right;
-    width:14%;
+    float: right;
+    width: 14%;
     font-size: 1vw;
 }
 
 .left {
     line-height: .2vw;
     background-color: darkred;
-    float:left;
-    width:32%;
-    height:100%;
+    float: left;
+    width: 32%;
+    height: 100%;
     font-size: .7vw;
-    color:white;
+    color: white;
 }
 
 .right {
     line-height: .2vw;
     background-color: darkblue;
-    float:left;
-    width:32%;
-    height:100%;
+    float: left;
+    width: 32%;
+    height: 100%;
     font-size: .7vw;
     color: white;
 }
@@ -52,23 +52,23 @@ body {
 .center {
     background-color: gray;
     margin-top: 0;
-    float:left;
-    height:100%;
-    width:36%;
+    float: left;
+    height: 100%;
+    width: 36%;
     font-size: 1vw;
 }
 
 .container {
     margin-left: 13%;
     position: absolute;
-    border: 4px solid black; 
-    width:70%;
-    height:30%;
+    border: 4px solid black;
+    width: 70%;
+    height: 30%;
 }
 
 canvas {
-    width :70.2% ;
-    height:65% ;
+    width: 70.2%;
+    height: 65%;
     background-color: white;
     position: absolute;
     left: 13.5%;

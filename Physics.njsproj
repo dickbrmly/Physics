@@ -29,6 +29,16 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="ballistics\ballistics.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="ballistics\index.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="ballistics\index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="bromleySolutions.js" />
     <Content Include="converter\converter.css" />
     <Content Include="converter\converter.js">
       <SubType>Code</SubType>
@@ -41,6 +51,12 @@
     <Content Include="elastic\elastic.css" />
     <Content Include="elastic\elastic.html" />
     <Content Include="elastic\elastic.js" />
+    <Content Include="electric\index.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="electric\index.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="gravitation\equations.jpg" />
     <Content Include="gravitation\gravitation.css" />
     <Content Include="gravitation\gravitation.js" />
@@ -52,6 +68,12 @@
     <Content Include="index.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="magnetic\index.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="magnetic\index.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -60,6 +82,9 @@
     <Folder Include="converter\" />
     <Folder Include="elastic\" />
     <Folder Include="gravitation\" />
+    <Folder Include="ballistics\" />
+    <Folder Include="electric\" />
+    <Folder Include="magnetic\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

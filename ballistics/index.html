@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<title>Ballistics</title>
+
+<head>
+    <meta name="Ballistics" content="interactive canvas" , initial-scale="1">
+    <link rel='stylesheet' type='text/css' href='index.css'>
+</head>
+
+<div id="rss" class="farLeft" direction='up'>
+    <p>
+        Ballistics (with perfect alignment), is only a two demensional event.  There is an inital force that converts to a speed which is converted to
+        a height against the constant force of gravity.
+    </p> <p>
+        Only vertical velocity is affected by gravity. Horzontal velocity continues to the point of
+        impact and maximum vertical velocity is dependent on surface terrain.
+    </p>
+    <p></p>
+    <p>Time is relative as they say.  I didn't take the time to determine calculation rates on host computers.
+    The rates are non-constants in anycase. So, the cannon ball may not move at the calulated travel time. </p>
+</div>
+
+<div class='container'>
+
+    <div class='left'>
+        <span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mass in kg</span><input id='mass' type="number" value='10'>
+        <span><br />Newtons Force</span><input id='force' type='number' value='300'>
+        <Span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Angle of lift<input id='lift' type='number' value='45' onchange="point();"></Span>
+
+        <p id='initalVelocity'><br><br><br><br>&nbsp;Inital velocity = 30</p>
+        <p id='xmax'>&nbsp;Maximum X speed = 21</p>
+        <p id='ymax'>&nbsp;Maximum Y speed = 21</p>
+
+        <img class="equations" src="equations.jpg" />
+
+    </div>
+    <script>
+        function point() {
+             var deg = document.getElementById("lift").value;
+            document.getElementById('cannon').style = 'transform: rotate(' + -deg + 'deg)';
+        }
+    </script>
+    <div class='center'>
+        <h3 class='title' style='color:white; text-align:center'>2D Ballistic Simulator.</h3>
+        <h4>Values are in kilograms, Newtons, and Degress</h4>
+        <p>The cannon angle is counter-clockwise, zero being straight to the right.</p>
+        <div style='text-align:center'><button id=run onclick="runsim()">Run simulation</button></div>
+        <div style='text-align:center'><button id=run onclick="window.close()">Close Window</button></div>
+    </div>
+
+    <div class='right'>
+        <p id="height">&nbsp; &nbsp; &nbsp; Maximum height = 23</p>
+        <p id="distance">&nbsp; Maximum distance = 46</p>
+
+        <p id="travel">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;travel time = 2.16</p>
+    </div>
+    <img id="cannon" class="cannon" src="cannon.jpg" onload="point();" />
+</div>
+
+<div class="farRight">
+    <p>One side or the other.  One must pick.</p>
+</div>
+<canvas id='myCanvas' width='1350' height='625'>
+    Your browser does not support the canvas element.
+</canvas>
+<script src="ballistics.js"></script>
