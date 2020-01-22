@@ -51,6 +51,9 @@
     <Content Include="elastic\elastic.css" />
     <Content Include="elastic\elastic.html" />
     <Content Include="elastic\elastic.js" />
+    <Content Include="electric\electric.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="electric\index.css">
       <SubType>Code</SubType>
     </Content>

@@ -1,61 +1,23 @@
 ﻿<!DOCTYPE html>
+
 <title>Electric Circuit</title>
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' type='text/css' href='index.css'>
-
-
 </head>
 <div class=farLeft>
-    <!-- <p>I believe energy exists on one of three vectors, static, magnetic, or velocity.<br /><br />If energy is conducting on a static vector then
-     there cannot be a build-up of static potentual, but magnetic and velocity can be changed.<br /><br />If conduction is on the magnetic vector then
-     static and velocity can altered while magnetic cannot.<br /><br />If conduction is on the velocity vector, then magnetic and static can be
-     manipulated but velocity or time (same thing) cannot.<br /><br />Light conducts on a velocity vector allowing static and magnetic potentuals.<br />
-     Matter conducts on a static or magnetic vector.</p>  -->
+    <p>I believe energy exists on one of three conducting vectors, static, magnetic, or velocity (time).<br /><br />If energy is conducting on a static vector then
+     there cannot be a build-up of static potentual, but magnetic and velocity can be charged.<br /><br />If conduction is on the magnetic vector then
+     static and velocity can altered while magnetic cannot. Atoms conduct on a magnetic vector.  A single atom can be staticly charged, or accelorated.
+      <br /><br />If conduction is on the velocity vector, then magnetic and static can be altered but velocity or time (same thing) cannot.<br /><br />
+        Light conducts on a velocity vector allowing for static and magnetic potentuals (electro-magnetic).
 </div>
-
-<div class='container'>
-
-    <div class='left'>
-        <span>&nbsp; Mass in kg</span><input id='mass1' type="number" value='1'>
-        <span>X/Y Velocity</span><input id='velosity1x' type='number' value='1'>
-        <input id='velosity1y' type='number' value='0'>
-        <p id='leftMomentum'><br><br><br><br>&nbsp;Inital Momentum 1</p>
-        <p id='leftKenetic'>&nbsp;Inital Kenetic Energy 0.5</p>
-
-        <p id='leftFinalVelocity'><br><br><br><br>&nbsp;Final Velocity (-1, 0)</p>
-        <p id='leftFinalMomentum'>&nbsp;Final Momentum 1</p>
-        <p id='leftFinalKenetic'>&nbsp;Final Kenetic Energy 0.5</p>
-
-    </div>
-
-    <div class='center'>
-        <h3 class='title' style='color:white; text-align:center'>2D elastic impact simulator.</h3>
-        <h4>Values are in kilograms and meters-per-second</h4>
-        <p>Velocity is entered using retangular coordinates. Note that combined momentum and potentual energy is conserved.</p>
-        <div style='text-align:center'><button id=run onclick="runsim()">Run simulation</button></div>
-        <div style='text-align:center'><button id=run onclick="window.close()">Close Window</button></div>
-    </div>
-
-    <div class='right'>
-        <span>&nbsp; Mass in kg</span><input id='mass2' type="number" value='1'>
-        <span>X/Y Velocity</span><input id='velosity2x' type='number' value='-1'>
-        <input id='velosity2y' type='number' value='0'>
-
-        <p id='rightMomentum'><br><br><br><br>&nbsp;Inital Momentum 1</p>
-        <p id='rightKenetic'>&nbsp;Inital Kenetic Energy 0.5</p>
-
-        <p id='rightFinalVelocity'><br><br><br><br>&nbsp;Final Velocity (1, 0)</p>
-        <p id='rightFinalMomentum'>&nbsp;Final Momentum 1</p>
-        <p id='rightFinalKenetic'>&nbsp;Final Kenetic Energy 0.5</p>
-    </div>
-
+<div class="center">
+    <img id="circuit" src="electric1.jpg" />
+    <p>Click on the single pole double throw switches to see the change in current on the meter.</p>
 </div>
 
 <div class="farRight">
     <p>One side or the other.  One must pick.</p>
 </div>
-<canvas id='myCanvas' width='1350' height='625'>
-    Your browser does not support the canvas element.
-</canvas>
+<script src="electric.js"></script>
