@@ -28,6 +28,9 @@ body {
 img {
     border:double;
 }
+#closer {
+   margin-left:70%;
+}
 .center {
     background-color: wheat;
     margin-top: 0;
