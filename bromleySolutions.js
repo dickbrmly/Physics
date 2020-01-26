@@ -34,8 +34,8 @@ function startElectric() {
     window.open("/electric/index.html");
 }
 
-function startMagnetic() {
-    window.open("/magnetic/index.html");
+function startEquations() {
+    window.open("/equations/index.html");
 }
 
 function closeWin() {
