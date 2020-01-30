@@ -67,6 +67,18 @@ function progress() {
     y += yspeed + gravity;
     gravity += .0069;
     cannonBall.move(x, y);
+    strike(x, y);
     requestAnimationFrame(progress);
+}
+
+function strike(x, y) {
+    if (x > 410 && x < 430) {
+        if (y > 45 && y < 60) {
+            document.getElementById('balloon').src = 'pop.jpg';
+        }
+    }
+    if (x > 1080 && x < 1140) {
+        if (y > 560 && y < 600) { document.getElementById('tank').src = 'explosion.jpg'; }
+    }
 }
 

@@ -35,14 +35,14 @@
     </div>
     <script>
         function point() {
-             var deg = document.getElementById("lift").value;
+            var deg = document.getElementById("lift").value;
             document.getElementById('cannon').style = 'transform: rotate(' + -deg + 'deg)';
         }
     </script>
     <div class='center'>
         <h3 class='title' style='color:white; text-align:center'>2D Ballistic Simulator.</h3>
-        <h4>Values are in kilograms, Newtons, and Degress</h4>
-        <p>The cannon angle is counter-clockwise, zero being straight to the right.</p>
+        <h4>Values are in kilograms, Newtons, meters, and Degress</h4>
+        <p>The cannon angle is counter-clockwise, zero being straight to the right. Maximum angle is 90.</p>
         <div style='text-align:center'><button id=run onclick="runsim()">Run simulation</button></div>
         <div style='text-align:center'><button id=run onclick="window.close()">Close Window</button></div>
     </div>
@@ -54,6 +54,10 @@
         <p id="travel">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;travel time = 2.16</p>
     </div>
     <img id="cannon" class="cannon" src="cannon.jpg" onload="point();" />
+    <img id="balloon" class="balloon" src="balloon.jpg" />
+    <img id="tank" class="tank" src="tank.jpg" />
+    <img id="horz" class="horz" src="horz.jpg" />
+    <img id="vert" class="vert" src="vert.jpg" />
 </div>
 
 <div class="farRight">
