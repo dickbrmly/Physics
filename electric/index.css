@@ -29,11 +29,12 @@ img {
     border:double;
 }
 #closer {
-   margin-left:70%;
+   margin-left:78%;
 }
 .center {
     background-color: wheat;
     margin-top: 0;
+    margin-left: 5%;
     float: left;
     height: 100%;
     width: 40%;

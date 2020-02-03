@@ -10,9 +10,6 @@ body {
 }
 
 .farLeft {
-    background-color: black;
-    height: 50vw;
-    border-right: 5px solid black;
     float: left;
     width: 12%;
     font-size: 1vw;
@@ -33,9 +30,9 @@ body {
 .center {
     background-color: gray;
     margin-top: 0;
-    float: left;
+    margin-left: 13%;
     height: 100%;
-    width: 74%;
+    width: 73%;
     font-size: 1vw;
 }
 

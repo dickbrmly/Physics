@@ -6,9 +6,6 @@
 }
 
 .left {
-    font-family: fantasy;
-    background-color: darkslategray;
-    color: black;
     border-right: 5px solid white;
     float: left;
     width: 15%;

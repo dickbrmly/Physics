@@ -10,9 +10,6 @@ body {
 }
 
 .farLeft {
-    background-color: black;
-    height: 48vw;
-    border-right: 5px solid black;
     float:left;
     width:12%;
     font-size: 1vw;
