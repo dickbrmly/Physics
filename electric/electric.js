@@ -8,9 +8,9 @@ function getClickPosition(e) {
     var yPosition = e.clientY;
 
     if (yPosition / height > 150 / 720 && yPosition / height  < 270 / 720) {
-        if (xPosition  /width >  572 / 1280  &&  xPosition /width <  646/ 1280) sw = sw ^ 4;
-        if (xPosition / width >  661 / 1280  &&  xPosition / width  < 724 / 1280) sw = sw ^ 2;
-        if (xPosition / width >  744 / 1280  &&  xPosition / width  < 798 / 1280) sw = sw ^ 1;
+        if (xPosition  /width >  692 / 1280  &&  xPosition / width  < 730 / 1280) sw = sw ^ 4;
+        if (xPosition / width >  775 / 1280  &&  xPosition / width  < 810 / 1280) sw = sw ^ 2;
+        if (xPosition / width >  845 / 1280  &&  xPosition / width  < 891 / 1280) sw = sw ^ 1;
 
         switch (sw) {
             case 1:
