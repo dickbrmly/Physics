@@ -10,7 +10,6 @@ body {
 }
 
 img {
-
     align-content: center;
     margin-bottom: 0;
     border: 1px solid black;
@@ -32,10 +31,19 @@ img {
 }
 
 .center {
-    margin-top:10%;
+    margin-top:2%;
     margin-left: 5%;
     float: left;
     width: 58%;
+}
+
+.centerText {
+    font-size:1vw;
+    color:gray;
+    margin-top: 0%;
+    margin-left: 5%;
+    float: left;
+    width: 90%;
 }
 
 .right {
@@ -48,6 +56,8 @@ img {
 
 .cellBorder {
     border: 5px solid #888;
+    fill:aqua;
+    color:black;
 }
 .cellBorder:hover {
     opacity: 0.8;
@@ -116,9 +126,9 @@ button:hover {
     font-size: 1.2vw;
 }
 
-    .container:hover {
+.container:hover {
         opacity: 0.8;
-    }
+ }
 
 .psw {
     color: black;
