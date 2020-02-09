@@ -50,6 +50,7 @@
     <Content Include="converter\volume.js" />
     <Content Include="siteMap.xml">
       <SubType>Code</SubType>
+      <Publish>True</Publish>
     </Content>
     <Content Include="elastic\elastic.css" />
     <Content Include="elastic\elastic.html" />
