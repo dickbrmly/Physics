@@ -48,6 +48,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="converter\volume.js" />
+    <Content Include="googlea5949884893ee709.html">
+      <Publish>True</Publish>
+    </Content>
     <Content Include="siteMap.xml">
       <SubType>Code</SubType>
       <Publish>True</Publish>
