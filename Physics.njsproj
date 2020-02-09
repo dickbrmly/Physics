@@ -51,7 +51,7 @@
     <Content Include="googlea5949884893ee709.html">
       <Publish>True</Publish>
     </Content>
-    <Content Include="siteMap.xml">
+    <Content Include="sitemap.xml">
       <SubType>Code</SubType>
       <Publish>True</Publish>
     </Content>
