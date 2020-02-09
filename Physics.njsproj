@@ -48,6 +48,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="converter\volume.js" />
+    <Content Include="siteMap.xml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="elastic\elastic.css" />
     <Content Include="elastic\elastic.html" />
     <Content Include="elastic\elastic.js" />
