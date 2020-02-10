@@ -5,7 +5,6 @@ class item {
         this.mass = mass;
         this.velocity = {xSpeed: velocity.xSpeed, ySpeed: velocity.ySpeed};
         this.momentum = Math.sqrt(Math.pow(velocity.xSpeed,2) + Math.pow(velocity.ySpeed,2)) * mass;
-
         this.kenetic = 0.5 * mass * (Math.pow(velocity.xSpeed,2) + Math.pow(velocity.ySpeed,2));
         this.x = x;
         this.y = y;

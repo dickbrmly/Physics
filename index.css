@@ -38,8 +38,9 @@ img {
 }
 
 .centerText {
+    background-color:lightblue;
     font-size:1vw;
-    color:gray;
+    color:blue;
     margin-top: 0%;
     margin-left: 5%;
     float: left;
