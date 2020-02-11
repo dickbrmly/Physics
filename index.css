@@ -24,6 +24,7 @@ img {
 }
 
 .left {
+    margin-left:1%;
     color: black;
     border-right: 5px solid black;
     float: left;
