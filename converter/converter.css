@@ -1,5 +1,6 @@
 
 .left, .center, .right {
+    color:white;
     margin-top: 0;
     height: 48vw;
     font-size: 0.8vw;
@@ -12,7 +13,7 @@
 }
 
 .center {
-     text-shadow: 3px 2px black;
+    text-shadow: 3px 2px black;
     margin-left: 0%;
     float: left;
     width: 68%;
