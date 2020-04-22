@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<title>Conversion Disscussion Board</title>
+<link href="/messages/Conversion/index.css" rel="styleSheet" />
+<script src="/messages/Conversion/index.js"></script>
+<script>loadXMLDoc();</script>
+<html0 xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="description" content="Interactive Physics Message Board">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Richard Bromley">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <h2 style="margin-left:45%">Conversion Discussions</h2>
+
+    <body>
+        <table id='topics' class='topics'></table>
+        <div>
+            <button style="margin-left:40%; align-content:flex-end" class="button" onclick="window.close()"> Close Window </button>
+            <button style="margin-left:5%; align-content:flex-end" id="messageButton" class="button" onclick="grabLogin()"> Message </button>
+        </div>
+    </body>
+
+    <div id="message" class="modal">
+        <form class="modal-content">
+            <div class="container">
+
+                <h2 style="text-align:center; color:black">Message Form</h2>
+
+                <input type="hidden" name="form" value="Conversion" />
+
+                <label for="uname">Username</label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br/><br />
+                <label style="margin-left:40%" for="message">Comment</label>
+                <textarea name="message" cols="53" rows="5"></textarea>
+
+
+
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button onclick="document.getElementById('message').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("messageButton").addEventListener("click", grabMessage);
+    </script>

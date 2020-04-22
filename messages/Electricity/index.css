@@ -1,0 +1,38 @@
+table, td, th {
+    width: 3%
+}
+
+table {
+    margin-left: 7%;
+    border-collapse: separate;
+    border-spacing: 3vw;
+    width: 80%;
+    height: 90%;
+}
+
+th, td {
+    color: black;
+    height: 1.2vw;
+    width: 30%;
+    text-align:left;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 32%;
+    top: 32%;
+    width: 25%; /* Could be more or less, depending on screen size */
+    overflow: no-content; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 6px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% 5%; /* 5% from the top, 15% from the bottom and centered */
+    border: 0.5vw solid #888;
+}

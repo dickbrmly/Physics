@@ -83,35 +83,15 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-
+button {
+    height: 50px;
+    width: 250px;
+    color: Black;
+    background-color: deepskyblue;
+    margin: -5% 35%;
+}
 button:hover {
     opacity: 0.8;
-}
-
-.login {
-    width: 22%;
-    text-decoration: none;
-    background-color: rgb(13, 13, 80);
-    color: white;
-    padding: 1% 2%;
-    margin: 0% 0%;
-    border: double;
-    cursor: pointer;
-    font-size: 1.2vw;
-}
-
-.logout {
-    position: absolute;
-    top: 92%;
-    width: 68%;
-    text-decoration: none;
-    background-color: rgb(13, 13, 80);
-    color: white;
-    padding: 1% 2%;
-    margin: 0% 0%;
-    border: double;
-    cursor: pointer;
-    font-size: 1.2vw;
 }
 
 /* Extra styles for the cancel button */

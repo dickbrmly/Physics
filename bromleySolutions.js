@@ -38,6 +38,10 @@ function startEquations() {
     window.open("/equations/index.html");
 }
 
+function startMessageBoard() {
+    window.open("/messages/index.html");
+}
+
 function closeWin() {
     window.close();
 }

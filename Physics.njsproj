@@ -38,6 +38,7 @@
     <Content Include="ballistics\index.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="ballistics\index.js" />
     <Content Include="bromleySolutions.js" />
     <Content Include="converter\converter.css" />
     <Content Include="converter\converter.js">
@@ -51,6 +52,50 @@
     <Content Include="equations\equations.html" />
     <Content Include="googlea5949884893ee709.html">
       <Publish>True</Publish>
+    </Content>
+    <Content Include="messages\Ballistics\index.css" />
+    <Content Include="messages\Ballistics\index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="messages\Ballistics\index.js" />
+    <Content Include="messages\Ballistics\index.xml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="messages\Collision\index.css" />
+    <Content Include="messages\Collision\index.html" />
+    <Content Include="messages\Collision\index.js" />
+    <Content Include="messages\Collision\index.xml" />
+    <Content Include="messages\Conversion\index.css" />
+    <Content Include="messages\Conversion\index.html" />
+    <Content Include="messages\Conversion\index.js" />
+    <Content Include="messages\Conversion\index.xml" />
+    <Content Include="messages\Electricity\index.css" />
+    <Content Include="messages\Electricity\index.html" />
+    <Content Include="messages\Electricity\index.js" />
+    <Content Include="messages\Electricity\index.xml" />
+    <Content Include="messages\Equations\index.css" />
+    <Content Include="messages\Equations\index.html" />
+    <Content Include="messages\Equations\index.js" />
+    <Content Include="messages\Equations\index.xml" />
+    <Content Include="messages\General\index.css" />
+    <Content Include="messages\General\index.html" />
+    <Content Include="messages\General\index.js" />
+    <Content Include="messages\General\index.xml" />
+    <Content Include="messages\Gravitation\index.css" />
+    <Content Include="messages\Gravitation\index.html" />
+    <Content Include="messages\Gravitation\index.js" />
+    <Content Include="messages\Gravitation\index.xml" />
+    <Content Include="messages\index.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="messages\index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="messages\topics.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="messages\topics.xml">
+      <SubType>Code</SubType>
     </Content>
     <Content Include="sitemap.xml">
       <SubType>Code</SubType>
@@ -96,6 +141,14 @@
     <Folder Include="ballistics\" />
     <Folder Include="electric\" />
     <Folder Include="equations\" />
+    <Folder Include="messages\" />
+    <Folder Include="messages\General\" />
+    <Folder Include="messages\Conversion\" />
+    <Folder Include="messages\Collision\" />
+    <Folder Include="messages\Gravitation\" />
+    <Folder Include="messages\Ballistics\" />
+    <Folder Include="messages\Electricity\" />
+    <Folder Include="messages\Equations\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

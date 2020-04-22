@@ -1,79 +1,1 @@
-
-.left, .center, .right {
-    color:white;
-    margin-top: 0;
-    height: 48vw;
-    font-size: 0.8vw;
-}
-
-.left {
-    border-right: 5px solid white;
-    float: left;
-    width: 15%;
-}
-
-.center {
-    text-shadow: 3px 2px black;
-    margin-left: 0%;
-    float: left;
-    width: 68%;
-}
-
-.right {
-    color: white;
-    border-left: 5px solid white;
-    float: right;
-    margin-right: 0%;
-    width: 15%;
-}
-
-.columnTitle {
-    text-align: center;
-    color: ghostwhite;
-}
-
-.columnUnits {
-    text-align: right;
-    color: ghostwhite;
-}
-
-.result {
-    overflow-x:hidden;
-    text-align: right;
-    color: ghostwhite;
-    font-family:'Times New Roman', Times, serif;
-}
-
-.units {
-    text-align: right;
-    color: wheat;
-}
-
-.kenetic, .volume, .distance, .force, .angle, .coordinate, .temperature{
-    display:inline-flex;
-    padding: 0.5vw;
-    margin: 0.5vw;
-    line-height: 1vw;
-    border-style: solid;
-    border-color: azure;
-    border-width: 0.25vw;
-    background-color: darkslategray;
-}
-
-table, th, td {
-    margin:1vw;
-}
-button {
-    position:absolute;
-   left:75.5%;
-    background-color: black;
-    color: white;
-    padding: 0.5vw 0.5vw;
-    font-size: 1vw;
-}
-
-input {
-    font-size:0.8vw;
-    margin-left:10%;
-    width: 70%;
-}
+.left, .center, .right {    color:white;    margin-top: 0;    height: 48vw;    font-size: 0.8vw;}.left {    border-right: 5px solid white;    float: left;    width: 15%;}.center {    text-shadow: 3px 2px black;    margin-left: 0%;    float: left;    width: 68%;}.right {    color: white;    border-left: 5px solid white;    float: right;    margin-right: 0%;    width: 15%;}.columnTitle {    text-align: center;    color: ghostwhite;}.columnUnits {    text-align: right;    color: ghostwhite;}.result {    overflow-x:hidden;    text-align: right;    color: ghostwhite;    font-family:'Times New Roman', Times, serif;}.units {    text-align: right;    color: wheat;}.kenetic, .volume, .distance, .force, .angle, .coordinate, .temperature{    display:inline-flex;    padding: 0.5vw;    margin: 0.5vw;    line-height: 1vw;    border-style: solid;    border-color: azure;    border-width: 0.25vw;    background-color: darkslategray;}table, th, td {    margin:1vw;}button {    position:absolute;    left:75.5%;    background-color: black;    color: white;    padding: 0.5vw 0.5vw;    font-size: 1vw;}input {    font-size:0.8vw;    margin-left:10%;    width: 70%;}

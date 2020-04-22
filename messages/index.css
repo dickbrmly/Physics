@@ -1,0 +1,26 @@
+table, td, th {
+    width: 3%
+}
+
+table {
+    margin-left: 7%;
+    border-collapse: separate;
+    border-spacing: 3vw;
+    width: 80%;
+    height: 90%;
+}
+
+th, td {
+    color: black;
+    height: 1.2vw;
+    width: 30%;
+    text-align:left;
+}
+
+button {
+    height: 50px;
+    width: 250px;
+    color: Black;
+    background-color: deepskyblue;
+    margin: -5% 42%;
+}
