@@ -66,25 +66,23 @@ function recordMessage(request, response) {
     var entry = url.parse(request.url, true).query;
     
     var xmlFile = fs.readFileSync('./messages/' + entry.form + '/index.xml', 'utf8');
-    var content = "  <topic>" + '\r\n' + "  <date>" + Date() + "</date>" + '\r\n'
-        + "  <category>" + entry.form + "</category>" + '\r\n' + "  <message>" + entry.message
-        + "</message>" + '\r\n' + "  <author>" + entry.uname + "</author>" + '\r\n'
-        + "  </topic>" + '\r\n';
-    var newXmlFile = xmlFile.replace('</topics>', '') + content + '</topics>';
+    if (xmlFile.length < 6000) {
+        var content = "<topic>" + '\r\n' + "  <date>" + Date() + "</date>" + '\r\n'
+            + "  <category>" + entry.form + "</category>" + '\r\n' + "  <message>" + entry.message
+            + "</message>" + '\r\n' + "  <author>" + entry.uname + "</author>" + '\r\n'
+            + "</topic>";
+        var newXmlFile = xmlFile.replace('</topics>', '') + content + '</topics>';
 
-    fs.writeFileSync('./messages/' + entry.form + '/index.xml', newXmlFile);
+        fs.writeFileSync('./messages/' + entry.form + '/index.xml', newXmlFile);
 
-    var item = 0;
-    
-    xmlFile = fs.readFileSync('./messages/topics.xml', 'utf8');
+        xmlFile = fs.readFileSync('./messages/topics.xml', 'utf8');
 
-    var x = xmlFile.indexOf(entry.form);
-    var y = x;
-    while (xmlFile.substring(x, x + 7) !== '<topic>') --x;
-    while (xmlFile.substring(y, y + 8) !== '</topic>') ++y;
-    var newXmlTopics = xmlFile.substring(0, x) + content + xmlFile.substring(y + 8);
-    fs.writeFileSync('./messages/topics.xml', newXmlTopics);
-    
-    var reread = fs.readFileSync('./messages/' + entry.form + '/index.html', 'utf8');
-    response.end(reread);
+        var x = xmlFile.indexOf(entry.form);
+        var y = x;
+        while (xmlFile.substring(x, x + 7) !== '<topic>') --x;
+        while (xmlFile.substring(y, y + 8) !== '</topic>') ++y;
+        var newXmlTopics = xmlFile.substring(0, x) + content + xmlFile.substring(y + 8);
+        fs.writeFileSync('./messages/topics.xml', newXmlTopics);
+    }
+    sendHTML('/messages/' + entry.form + '/index.html', 'text/html',response);
 }

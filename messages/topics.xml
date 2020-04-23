@@ -1,47 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <topics>
-    <topic>
-  <date>Thu Apr 23 2020 04:47:41 GMT-0700 (Pacific Daylight Time)</date>
-  <category>General</category>
-  <message>It's always ready baby!</message>
-  <author>Rocket</author>
+  <topic>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
+    <category>General</category>
+    <message>Welcome to the general topics message board.</message>
+    <author>Richard Bromley</author>
   </topic>
-
-    <topic>
-  <date>Thu Apr 23 2020 04:48:29 GMT-0700 (Pacific Daylight Time)</date>
-  <category>Conversion</category>
-  <message>Up, up, and a way baby!</message>
-  <author>Superman</author>
+  <topic>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
+    <category>Conversion</category>
+    <message>Welcome to the conversion message board.</message>
+    <author>Richard Bromley</author>
   </topic>
-
-<topic>
-    <date>2020-4-19</date>
+  <topic>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
     <category>Collision</category>
-    <message>Punching count?</message>
-    <author>wildman</author>
-</topic>
-<topic>
-  <date>2020-4-19</date>
-  <category>Gravitation</category>
-  <message>Gravity warps time and space like an electric flow warps a magnetic field?</message>
-  <author>dickbrmly</author>
-</topic>
+    <message>Welcome to the collision message board.</message>
+    <author>Richard Bromley</author>
+  </topic>
   <topic>
-    <date>2020-4-19</date>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
+    <category>Gravitation</category>
+    <message>Welcome to the gravity message board.</message>
+    <author>Richard Bromley</author>
+  </topic>
+  <topic>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
     <category>Ballistics</category>
-    <message>Punching count?</message>
-    <author>wildman</author>
+    <message>Welcome to the ballistics message board.</message>
+    <author>Richard Bromley</author>
   </topic>
   <topic>
-    <date>2020-4-19</date>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
     <category>Electricity</category>
-    <message>Punching count?</message>
-    <author>wildman</author>
+    <message>Welcome to the electricity message board.</message>
+    <author>Richard Bromley</author>
   </topic>
   <topic>
-    <date>2020-4-19</date>
+    <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
     <category>Equations</category>
-    <message>Punching count?</message>
-    <author>wildman</author>
+    <message>Welcome to the equations message board.</message>
+    <author>Richard Bromley</author>
   </topic>
-</topics>
+ </topics>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <topics>
   <topic>
-  <date>Wed Apr 22 2020 03:03:47 GMT-0700 (Pacific Daylight Time)</date>
-  <category>Collision</category>
-  <message>I have come to dominate this world!</message>
-  <author>MasterBlaster</author>
-  </topic>
-  <topic>
-  <date>Wed Apr 22 2020 06:59:14 GMT-0700 (Pacific Daylight Time)</date>
-  <category>Collision</category>
-  <message>Spank them all, I say!</message>
-  <author>Randy</author>
+    <date>Thu Apr 23 2020 07:03:07 GMT-0700 (Pacific Daylight Time)</date>
+    <category>Collision</category>
+    <message>Welcome to the collision message board.</message>
+    <author>Richard Bromley</author>
   </topic>
 </topics>
