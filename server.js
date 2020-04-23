@@ -73,6 +73,18 @@ function recordMessage(request, response) {
     var newXmlFile = xmlFile.replace('</topics>', '') + content + '</topics>';
 
     fs.writeFileSync('./messages/' + entry.form + '/index.xml', newXmlFile);
+
+    var item = 0;
+    
+    xmlFile = fs.readFileSync('./messages/topics.xml', 'utf8');
+
+    var x = xmlFile.indexOf(entry.form);
+    var y = x;
+    while (xmlFile.substring(x, x + 7) !== '<topic>') --x;
+    while (xmlFile.substring(y, y + 8) !== '</topic>') ++y;
+    var newXmlTopics = xmlFile.substring(0, x) + content + xmlFile.substring(y + 8);
+    fs.writeFileSync('./messages/topics.xml', newXmlTopics);
+    
     var reread = fs.readFileSync('./messages/' + entry.form + '/index.html', 'utf8');
     response.end(reread);
 }

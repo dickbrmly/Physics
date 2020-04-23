@@ -26,6 +26,7 @@ function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     var table = "<th>DATE</th><th>CATEGORY</th><th>MESSAGE</th><th>AUTHOR</th>";
     var x = xmlDoc.getElementsByTagName("topic");
+
     for (i = 0; i < x.length; i++) {
         table += "<tr><th>" +
             x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
