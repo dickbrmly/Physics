@@ -3,11 +3,11 @@ table, td, th {
 }
 
 table {
-    margin-left: 7%;
+    margin-left: 2%;
     border-collapse: separate;
-    border-spacing: 3vw;
-    width: 80%;
-    height: 90%;
+    border-spacing: 1vw;
+    width: 90%;
+    height: 80%;
 }
 
 th, td {
