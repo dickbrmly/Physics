@@ -15,31 +15,31 @@
 // When the user clicks anywhere outside of the modal, close it
 
 function startConversions() {
-    window.open("/Physics/converter/index.html");
+    window.open("/converter/index.html");
 }
 
 function startElastic() {
-    window.open("/Physics/elastic/elastic.html");
+    window.open("/elastic/elastic.html");
 }
 
 function startGravitation() {
-    window.open("/Physics/gravitation/index.html");
+    window.open("/gravitation/index.html");
 }
 
 function startBallistics() {
-    window.open("/Physics/ballistics/index.html");
+    window.open("/ballistics/index.html");
 }
 
 function startElectric() {
-    window.open("/Physics/electric/index.html");
+    window.open("/electric/index.html");
 }
 
 function startEquations() {
-    window.open("/Physics/equations/index.html");
+    window.open("/equations/index.html");
 }
 
 function startMessageBoard() {
-    window.open("/Physics/messages/index.html");
+    window.open("/messages/index.html");
 }
 
 function closeWin() {
