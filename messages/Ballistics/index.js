@@ -18,7 +18,7 @@ function loadXMLDoc() {
             myFunction(this);
         }
     };
-    xmlhttp.open("GET", "/messages/Ballistics/index.xml", true);
+    xmlhttp.open("GET", "index.xml", true);
     xmlhttp.send();
 }
 function myFunction(xml) {
@@ -50,4 +50,9 @@ function myFunction(xml) {
 
 function grabMessage() {
     document.getElementById('message').style.display = 'block';
+}
+
+function cancel() {
+    document.getElementById("text").value = "cancel";
+    document.getElementById('message').style.display = 'none';
 }

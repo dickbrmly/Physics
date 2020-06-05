@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <title>Conversion Disscussion Board</title>
-<link href="/messages/Conversion/index.css" rel="styleSheet" />
-<script src="/messages/Conversion/index.js"></script>
+<link href="index.css" rel="styleSheet" />
+<script src="index.js"></script>
 <script>loadXMLDoc();</script>
 <html0 xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -26,20 +26,41 @@
 
                 <h2 style="text-align:center; color:black">Message Form</h2>
 
-                <input type="hidden" name="form" value="Conversion" />
+                <input type="hidden" name="form" value="Conversion">
 
-                <label for="uname">First/Last Name</label>
-                <input type="text" placeholder="Enter Name" name="uname" required>
+                <input id="uname" type="hidden" name="uname">
+                <script>
+                    var xmlhttp;
+                    if (window.XMLHttpRequest) {
+                        xmlhttp = new XMLHttpRequest(); //for IE7+, Firefox, Chrome, Opera, Safari
+                    } else {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //for IE6, IE5
+                    }
+                    //Create a asynchronous GET request
+                    xmlhttp.open("GET", "uname.txt", false);
+                    xmlhttp.send(null);
+
+                    //Execution blocked till server send the response
+                    if (xmlhttp.readyState == 4) {
+                        if (xmlhttp.status == 200) {
+                            var response = JSON.parse(xmlhttp.responseText);
+                            document.getElementById("uname").value = response.userName;
+                        }
+                        else {
+                            alert('Something is wrong !!');
+                        }
+                    }
+                </script>
                 <br /><br />
                 <label style="margin-left:40%" for="message">Comment</label>
-                <textarea name="message" cols="53" rows="5"></textarea>
+                <textarea id="text" style="margin-left:5%" name="message" cols="50 " rows="5"></textarea>
 
 
 
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button onclick="document.getElementById('message').style.display='none'" class="cancelbtn">Cancel</button>
+                <button onclick="cancel()" class="cancelbtn">Cancel</button>
                 <button type="submit">Submit</button>
             </div>
         </form>
