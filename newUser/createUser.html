@@ -1,0 +1,66 @@
+﻿<!--*******************************************************************************************************
+*                                             Bromley Solutions Website
+*                                                Create New User Page
+*
+* This website will have facilities for user login and creation.  It will have online programs for
+* use by registered users.
+*
+*
+* Date:  11-22-2019
+* Author: Richard Bromley
+*******************************************************************************************************-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Create User</title>
+</head>
+<body>
+    <link href="/newUser/createUser.css" rel="stylesheet" type="text/css">
+    <script src="../bromleySolutions.js"></script>
+    <img src="./bromleySolutions.jpg" alt="Bromley Solutions Graphic">
+    <div>
+        <h1 style="color:blue; margin-left:40%">Entry Form</h1>
+        <form>
+            <div>
+                <input type="hidden" name="form" value="newUser" />
+
+                <span><label for="uname" style="font-size: 2.2vw; color:blue"><b>Username</b></label></span>
+                <input type="text" style="width:35%; font-size: 2.2vw" placeholder="Enter Username" name="uname" required>
+                <label for="email" style="font-size: 2.2vw; color:blue"><b>Email</b></label>
+                <input type="text" style="width:46%; font-size: 2.2vw" placeholder="Enter Email" name="email" required>
+
+
+
+                <br /><label for="fname" style="margin-left:10%; font-size: 2.2vw; color:blue"><b>First Name</b></label>
+                <span><label for="mname" style="margin-left:20%; font-size: 2.2vw; color:blue"><b>Middle Name</b></label></span>
+                <span><label for="lname" style="margin-left:22%; font-size: 2.2vw; color:blue"><b>Last Name</b></label></span>
+                <br /><input type="text" style="width:30%; margin-right:4.1%; font-size: 2.2vw" placeholder="Enter first name" name="fname">
+                <span><input type="text" style="width:30%; margin-right:4.1%; font-size: 2.2vw" placeholder="Enter Middle name" name="mname"></span>
+                <span><input type="text" style="width:30%; font-size: 2.2vw" placeholder="Enter last name" name="lname"></span>
+
+
+                <br /><label for="street" style="margin-left:10%; font-size: 2.2vw; color:blue"><b>Street Address</b></label>
+                <span><label for="city" style="margin-left:20%; font-size: 2.2vw; color:blue"><b>City</b></label></span>
+                <span><label for="st" style="margin-left:20%; font-size: 2.2vw; color:blue"><b>State</b></label></span>
+                <span><label for="zip" style="margin-left:13%; font-size: 2.2vw; color:blue"><b>Zip</b></label></span>
+                <br /><input type="text" style="width:40%; font-size: 2.2vw" placeholder="Enter Street Address" name="street">
+                <span><input type="text" style="width:22%; font-size: 2.2vw" placeholder="Enter city" name="city"></span>
+                <span><input type="text" style="width:22%; font-size: 2.2vw" placeholder="Enter state" name="st"></span>
+                <span><input type="text" style="width:14%; font-size: 2.2vw" placeholder="Enter zipcode" name="zip"></span>
+
+
+
+                <span><label for="psw" style="margin-left:1%; font-size: 2.2vw; color:blue"><b>Password</b></label></span>
+
+                <input type="password" style="width:87.4%; font-size: 2.2vw;" placeholder="Enter password" name="psw" required>
+
+                <br /><button type="submit" style="width:97%; font-size: 2.2vw" name="newUser" value="newUser">Submit</button>
+            </div>
+            <button id='cancelCreate' class='container' style="width:97%; background-color:gray; color:crimson; font-size: 2.2vw; text-align:center">Cancel User Creation</button>
+        </form>
+    </div>
+</body>
+</html>
+<script> document.getElementById("cancelCreate").addEventListener("click", closeWin); </script>

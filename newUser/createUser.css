@@ -1,0 +1,115 @@
+﻿/* Bromley Solutions
+ ==========================================================================
+    Main Bromley page
+
+    Programmer: Richard Bromley
+ ========================================================================== */
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+}
+
+.cellBorder {
+    border: 5px solid gray;
+    background-color: navy;
+    height:200px;
+    width:200px;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.cellBorder:hover {
+    opacity: 0.8;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1.2vw;
+}
+
+.declarations {
+    float: left;
+    margin: .1% .5%;
+    font-size: 1.2vw;
+}
+
+/* Set a style for all buttons */
+.table {
+    margin: 2% 15%;
+    width:70%;
+    height:90%;
+    padding:5px;
+    border-spacing:100px
+}
+
+button:hover {
+        opacity: 0.8;
+    }
+
+button {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1% 2%;
+    margin: 1% 1%;
+    border: double;
+    cursor: pointer;
+    font-size: 1.2vw;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    text-decoration: none;
+    width: auto;
+    background-color: #f44336;
+    font-size: 1.2vw;
+}
+
+.container {
+    text-decoration: none;
+    padding: 2%;
+    font-size: 1.2vw;
+}
+
+.container:hover {
+    opacity: 0.8;
+}
+
+.psw {
+    margin-top: 2%;
+    float: right;
+    font-size: 1.2vw;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 32%;
+    top: 32%;
+    width: 25%; /* Could be more or less, depending on screen size */
+    overflow: no-content; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 6px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% 5%; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+   
+}

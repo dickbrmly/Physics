@@ -12,18 +12,18 @@
 //'use strict';
 
 const http = require('http');
-//const https = require('https');
+const https = require('https');
 const fs = require('fs');
 var url = require('url');
 var mysql = require('mysql');
 
-/* var options = {
+ var options = {
     key: fs.readFileSync('./keys/multisan.key'),
     ca: [fs.readFileSync('./keys/347375790repl_1.ca-bundle')],
     cert: fs.readFileSync('./keys/347375790repl_1.crt'),
     requestCert: false,
     rejectUnaithorized: false
-}; */
+};
 
 var user =
 {
@@ -33,16 +33,15 @@ var user =
 
 var json = JSON;
 
-var port = process.env.PORT || 8080;
 
 loadSql();
 
-/* http.createServer(function (request, response) {
+ http.createServer(function (request, response) {
     response.writeHead(301, { "Location": "https://www.interactive-physics.org/index.html" });
     response.end();
- }).listen(80); */
+ }).listen(80,'174.69.163.26');
 
-http.createServer(function (request, response) {
+https.createServer(options, function (request, response) {
     if (request.url.includes('form')) {
         let entry = url.parse(request.url, true).query;
         if(entry.form.includes('newUser')) recordMessage(request, response);
@@ -59,7 +58,7 @@ http.createServer(function (request, response) {
                 }
             }
             if (!found) {
-                if (request.headers.host === 'www.interactive-physics.org') sendHTML('/Physics/userNot.html', 'text/html', response);
+                if (request.headers.host === 'www.interactive-physics.org') sendHTML('/userNot.html', 'text/html', response);
                 else sendHTML('/userNot.html', 'text/html', response);
                 console.log('Unknown user failed login.');
                 user.authorize = false;
@@ -85,19 +84,18 @@ http.createServer(function (request, response) {
         sendHTML(request.url, 'text/xml', response);
     } else {
         sendHTML('/index.html', 'text/html', response);
-    }
-}).listen(port);
+    }}).listen(443,'174.69.163.26');
 
 function sendHTML(urlName, contentType, response) {
     response.writeHead(200, { 'Content-Type': contentType });
     fs.readFile('.' + urlName, function (error, data) {
         if (error) {
-           // logger.error('File error for ' + urlName);
+            console.log('File error for ' + urlName);
             response.writeHead(404);
             response.write('File not found.');
             response.end();
         } else {
-            //logger.info('Response = ' + urlName);
+            console.log('Response = ' + urlName);
             response.end(data);
         }
     });
