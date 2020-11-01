@@ -28,10 +28,12 @@ var user = {
 };
 var json = JSON;
 loadSql();
+
 http.createServer(function(request, response) {
     response.writeHead(301, { "Location": "https://www.interactive-physics.org/index.html" });
     response.end();
-}).listen(80, '174.69.163.26');
+}).listen(8080);
+
 https.createServer(options, function(request, response) {
     if (request.url.includes('form')) {
         var entry = url.parse(request.url, true).query;
