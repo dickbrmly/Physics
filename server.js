@@ -15,25 +15,37 @@ var https = require('https');
 var fs = require('fs');
 var url = require('url');
 var mysql = require('mysql');
-var options = {
-    key: fs.readFileSync('./keys/interactive-physics.key'),
-    ca: [fs.readFileSync('./keys/366415587.ca-bundle')],
-    cert: fs.readFileSync('./keys/366415587.crt'),
-    requestCert: false,
-    rejectUnaithorized: false
-};
+
+var express = require('express');
+app = express();
+
+
+app.use(express.static('.'));
+//app.use("/patient", patient);
+//app.use("/responder", responder);
+//app.use("/administration", administration);
+
+
 var user = {
+    IP: '172.36.158.24',
     "userName": 'Dick',
     "authorize": false
 };
-var json = JSON;
-loadSql();
 
-http.createServer(function(request, response) {
-    response.writeHead(301, { "Location": "https://www.interactive-physics.org/index.html" });
-    response.end();
-}).listen(8080);
+app.listen(8080, function () {
+  console.log('app listening on port 8080');
+});
 
+/******************************************************************************************************************
+ *                                     Website lead-in and Sign-Up Page
+ *
+ ******************************************************************************************************************/
+app.get("/", function (req, res) {
+  
+     console.log("Website being Accessed");
+     res.sendFile(__dirname + "/index.html");
+});
+/* 
 https.createServer(options, function(request, response) {
     if (request.url.includes('form')) {
         var entry = url.parse(request.url, true).query;
@@ -149,8 +161,9 @@ function search(searchfield, value) {
             return true;
     return false;
 }
-
-function install(entry) {
+*/
+app.post('newuser', async function (request, response) 
+{
     var sql = 'INSERT INTO contacts (fname, lname, email, userName, psw, authorize) VALUES ( \'' + entry.fname + '\', \'' +
         entry.lname + '\', \'' + entry.email + '\', \'' + entry.uname + '\', \'' +
         entry.psw + '\', \'0\')';
@@ -175,4 +188,4 @@ function install(entry) {
             }
         });
     });
-}
+});

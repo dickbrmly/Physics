@@ -1,14 +1,30 @@
 {
-  "name": "physics",
+  "name": "phyics",
   "version": "1.0.0",
-  "description": "Physics Website",
-  "main": "server.js",
-  "author": {
-    "name": "Richard Bromley"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "debug": "nodemon ./server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://source.developers.Physics"
+  },
+  "author": "Richard Bromley dickbrmly@gmail.com",
+  "license": "ISC",
   "dependencies": {
-    "@google-cloud/logging-winston": "^3.0.4",
-    "dotenv": "^8.2.0",
-    "winston": "^3.2.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "http-errors": "~1.6.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "request-ip": "^2.1.3",
+    "require-stack": "^1.0.2",
+    "stack": "^0.1.0"
   }
 }
