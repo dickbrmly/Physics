@@ -18,7 +18,7 @@ function loadXMLDoc() {
             myFunction(this);
         }
     };
-    xmlhttp.open("GET", "index.xml", true);
+    xmlhttp.open("GET", "/messages/Conversion/index.xml", true);
     xmlhttp.send();
 }
 function myFunction(xml) {

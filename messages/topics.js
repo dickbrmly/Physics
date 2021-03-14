@@ -44,25 +44,25 @@ function myFunction(xml) {
         var th = event.target.innerHTML;
         switch (th) {
             case "General":
-                window.open("General/index.html");
+                window.open("/messages/General/index.html");
                 break;
             case "Ballistics":
-                window.open("Ballistics/index.html");
+                window.open("/messages/Ballistics/index.html");
                 break;
             case "Collision":
-                window.open("Collision/index.html");
+                window.open("/messages/Collision/index.html");
                 break;
             case "Conversion":
-                window.open("Conversion/index.html");
+                window.open("/messages/Conversion/index.html");
                 break;
             case "Electricity":
-                window.open("Electricity/index.html");
+                window.open("/messages/Electricity/index.html");
                 break;
             case "Equations":
-                window.open("Equations/index.html");
+                window.open("/messages/Equations/index.html");
                 break;
             case "Gravitation":
-                window.open("Gravitation/index.html");
+                window.open("/messages/Gravitation/index.html");
                 break;
             default:
                 break;

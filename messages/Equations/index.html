@@ -1,9 +1,10 @@
 ﻿<!doctype html>
 <title>Equations Disscussion Board</title>
-<link href="index.css" rel="styleSheet" />
-<script src="index.js"></script>
+<link href="/messages/Equations/index.css" rel="styleSheet" />
+<script src="/messages/Equations/index.js"></script>
 <script>loadXMLDoc();</script>
 <html0 xmlns="http://www.w3.org/1999/xhtml">
+
     <head>
         <meta name="description" content="Interactive Physics Message Board">
         <meta name="keywords" content="HTML,CSS,JavaScript">
@@ -21,41 +22,28 @@
     </body>
 
     <div id="message" class="modal">
-        <form class="modal-content">
+        <form class="modal-content" action='/form' method="post">
             <div class="container">
 
                 <h2 style="text-align:center; color:black">Message Form</h2>
 
-                <input type="hidden" name="form" value="Equations">
+                <input type="hidden" name="topic" value="Equations">
 
                 <input id="uname" type="hidden" name="uname">
                 <script>
                     var xmlhttp;
-                    if (window.XMLHttpRequest) {
+                    if (window.XMLHttpRequest)
+                    {
                         xmlhttp = new XMLHttpRequest(); //for IE7+, Firefox, Chrome, Opera, Safari
-                    } else {
+                    } else
+                    {
                         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); //for IE6, IE5
                     }
-                    //Create a asynchronous GET request
-                    xmlhttp.open("GET", "uname.txt", false);
-                    xmlhttp.send(null);
 
-                    //Execution blocked till server send the response
-                    if (xmlhttp.readyState == 4) {
-                        if (xmlhttp.status == 200) {
-                            var response = JSON.parse(xmlhttp.responseText);
-                            document.getElementById("uname").value = response.userName;
-                        }
-                        else {
-                            alert('Something is wrong !!');
-                        }
-                    }
                 </script>
                 <br /><br />
                 <label style="margin-left:40%" for="message">Comment</label>
                 <textarea id="text" style="margin-left:5%" name="message" cols="50" rows="5"></textarea>
-
-
 
             </div>
 
@@ -68,4 +56,8 @@
 
     <script>
         document.getElementById("messageButton").addEventListener("click", grabMessage);
+        window.onload = () =>
+        {
+            document.getElementById('uname').value = sessionStorage.getItem('userName');
+        }
     </script>

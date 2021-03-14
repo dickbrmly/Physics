@@ -24,8 +24,8 @@ app.use(express.urlencoded({extended:false}));
 
 let user = {
     IP: '172.36.158.24',
-    "userName": 'Dick',
-    "authorize": false
+    name: 'Dick',
+    authorize: false
 };
 /*************************************************************************************************************************
  * 
@@ -56,31 +56,85 @@ app.on('uncaughtException', function(err)
  * 
  * 
  *************************************************************************************************************************/
+function connect() 
+{
+     con = mysql.createConnection(
+    {
+        host: '174.69.163.24',
+        user: 'root',
+        password: 'Quest@8880',
+        database: 'bromleySolutions',
+        port: 3306,
+     // this object will be passed to the TLSSocket constructor
+     //ssl: {
+     //  ca: fs.readFileSync(__dirname + '/bin/ca-certificate.crt').toString()
+     //}
+   });
 
-app.post('/put', function (request, response){
+    con.connect(function(err) {
+    if (err) throw err;
+    console.log("SQL Server Connected!");
+    });
+}
+/*************************************************************************************************************************
+ * 
+ * 
+ * 
+ *************************************************************************************************************************/
 
-    var xmlFile = fs.readFileSync('./messages/' + entry.form + '/index.xml', 'utf8');
+app.post('/login', function (request, response){
+    connect();
+     
+    con.query(`SELECT * FROM contacts WHERE userName='${request.body.uname}' AND psw='${request.body.psw}'`, function (err, result) 
+     {
+          if (err || result.length == 0) 
+          {
+               console.log(err + " Login failure");
+               response.send("log-in failed.");
+               con.end();
+               return;
+          }
+          else 
+          {
+            user.IP = requestIp.getClientIp(request);
+            user.name = request.body.uname;
+            if (result[0].authorize == '1') user.authorize = true;
+            console.log(`${request.body.uname} logged in.`)
+            response.sendFile(__dirname + "/logged.html");
+          }
+     });
+});
+/*************************************************************************************************************************
+ * 
+ * 
+ * 
+ *************************************************************************************************************************/
+
+app.post('/form', function (request, response){
+
+    let xmlFile = fs.readFileSync('./messages/' + request.body.topic + '/index.xml', 'utf8');
     
-    if (xmlFile.length < 6000) {
-        var content = "<topic>" + '\r\n' + "  <date>" + Date() + "</date>" + '\r\n' +
-            "  <category>" + request.body.form + "</category>" + '\r\n' + "  <message>" + request.body.message +
+    if (xmlFile.length < 6000) 
+    {
+        let content = "<topic>" + '\r\n' + "  <date>" + Date() + "</date>" + '\r\n' +
+            "  <category>" + request.body.topic + "</category>" + '\r\n' + "  <message>" + request.body.message +
             "</message>" + '\r\n' + "  <author>" + request.body.uname + "</author>" + '\r\n' +
             "</topic>";
-        var newXmlFile = xmlFile.replace('</topics>', '') + content + '</topics>';
-        fs.writeFileSync('./messages/' + entry.form + '/index.xml', newXmlFile);
+
+        let newXmlFile = xmlFile.replace('</topics>', '') + content + '</topics>';
+        fs.writeFileSync('./messages/' + request.body.topic + '/index.xml', newXmlFile);
         xmlFile = fs.readFileSync('./messages/topics.xml', 'utf8');
-        var x = xmlFile.indexOf(entry.form);
-        var y = x;
+        let x = xmlFile.indexOf(request.body.topic);
+        let y = x;
         while (xmlFile.substring(x, x + 7) !== '<topic>')
             --x;
         while (xmlFile.substring(y, y + 8) !== '</topic>')
             ++y;
-        var newXmlTopics = xmlFile.substring(0, x) + content + xmlFile.substring(y + 8);
+        let newXmlTopics = xmlFile.substring(0, x) + content + xmlFile.substring(y + 8);
         fs.writeFileSync('./messages/topics.xml', newXmlTopics);
     }
-    sendHTML('/messages/' + entry.form + '/index.html', 'text/html', response);
+    response.sendFile(__dirname +'/messages/' + request.body.topic + '/index.html');
 });
-
 /*************************************************************************************************************************
  * 
  * 
@@ -88,7 +142,7 @@ app.post('/put', function (request, response){
  *************************************************************************************************************************/
 app.post('newuser', async function (request, response) 
 {
-    var sql = `INSERT INTO contacts (fname, lname, email, userName, psw, authorize) VALUES (''${request.body.fname}',
+    var sql = `INSERT INTO contacts (fname, lname, email, userName, psw, authorize) VALUES ('${request.body.fname}',
         '${request.body.lname}', '${request.body.email}', '${request.body.uname}', '${request.body.psw}',0)`;
 
         var con = mysql.createConnection({
