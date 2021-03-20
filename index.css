@@ -4,7 +4,18 @@
 
     Programmer: Richard Bromley
  ========================================================================== */
-body {
+page {
+    display: flexbox;
+    flex-direction: row;
+}
+ header {
+    height: 4%;
+    width: 100%;
+    flex: 1;
+}
+
+ body {    
+    flex: 3;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/backdrop.jpg");
@@ -16,50 +27,29 @@ body {
 img {
     align-content: center;
     margin-bottom: 0;
-    border: 1px solid black;
     width: 12vw;
     height: 8vw;
 }
 
-.left, .right {
-    margin-top: 0;
-    height: 96%;
-    font-size: 1vw;
+.flex-container {
+    display: flex;
+    flex-direction: row;
 }
 
-.left {
-    margin-left:1%;
-    color: black;
-    border-right: 5px solid black;
-    float: left;
-    width: 15%;
-    height:96%
+
+div.left {
+    flex: 1;
+    height: 80vh;
 }
 
-.center {
-    margin-top:0%;
-    margin-left: 5%;
-    float: left;
-    width: 58%;
-    height:96%;
+div.center {
+    flex:2;
+    height: 200px;
 }
 
-.centerText {
-    background-color:lightblue;
-    font-size:1vw;
-    color:blue;
-    margin-top: 0%;
-    margin-left: 5%;
-    float: left;
-    width: 90%;
-}
-
-.right {
-    color: black;
-    border-left: 5px solid black;
-    float: right;
-    margin-right: 0%;
-    width: 15%;
+div.right {
+    flex: 1;
+    height: 80vh;
 }
 
 .cellBorder {
@@ -69,6 +59,14 @@ img {
 }
 .cellBorder:hover {
     opacity: 0.8;
+}
+.centerText {
+    background-color:lightblue;
+    font-size:1vw;
+    color:blue;
+    margin-top: 0%;
+    margin-left: 5%;
+    width: 90%;
 }
 
 /* Full-width input fields */
@@ -109,16 +107,6 @@ button:hover {
     font-size: 1.2vw;
 }
 
-.container {
-    text-decoration: none;
-    padding: 2%;
-    font-size: 1.2vw;
-}
-
-.container:hover {
-        opacity: 0.8;
- }
-
 .psw {
     color: black;
     margin-top: 2%;
@@ -127,15 +115,14 @@ button:hover {
 }
 
 /* The Modal (background) */
-.modal {
+div.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     left: 32%;
     top: 32%;
     width: 25%; /* Could be more or less, depending on screen size */
     overflow: no-content; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: gray; /* Fallback color */
     padding-top: 6px;
 }
 
@@ -145,6 +132,16 @@ button:hover {
     margin: 5% 5%; /* 5% from the top, 15% from the bottom and centered */
     border: 0.5vw solid #888;
 }
+
+.container {
+    text-decoration: none;
+    padding: 2%;
+    font-size: 1.2vw;
+}
+
+.container:hover {
+        opacity: 0.8;
+ }
 
 table, td, th {
     width: 10%

@@ -12,89 +12,71 @@
 <title>Interactive Physics</title>
 <link href="/index.css" rel="stylesheet" type="text/css">
 <script src="/bromleySolutions.js"></script>
-<h1 style="font-size:4vw; margin-top:0%; margin-bottom:0%; margin-left:31%; color:white"> Interactive Physics</h1>
-<h4 style="font-size:0.75vw; margin-top:0%; margin-left:33%; color:yellow"> The branch of science concerned with the nature and properties of matter and energy.</h4>
-<style>
-    body {
-        background-image: url("/backdrop.jpg");
-        filter: brightness(100%);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-</style>
+<page>
+    <header>
+        <h1 style="font-size:4vw; margin-top:0%; margin-bottom:0%; margin-left:31%; color:white"> Interactive Physics</h1>
+        <h4 style="font-size:0.75vw; margin-top:0%; margin-left:33%; color:yellow"> The branch of science concerned with the nature and properties of matter and energy.</h4>
+    </header>
 
-<div class="left">
-    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=tradein_erd_20off_jgr&banner=0VF32HAT1ZJ0G6YRDFR2&f=ifr&linkID=71b43299083daa25a720c69b44a46382&t=interactiveph-20&tracking_id=interactiveph-20" width="213" height="800" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-</div>
+    <body>
+        <div class='flex-container'>
+            <div class="left">
+                <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=tradein_erd_20off_jgr&banner=0VF32HAT1ZJ0G6YRDFR2&f=ifr&linkID=71b43299083daa25a720c69b44a46382&t=interactiveph-20&tracking_id=interactiveph-20" width="213" height="800" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
 
-<style>
-    table, td, th {
-        width: 10%
-    }
+            <div class="center">
+                <p class="centerText">
+                    All matter and energy require a shared perspective to quantize
+                    parameters. Without a common perspective, value or quantity
+                    becomes abstract and meaningless. A good example would be money.
+                    Monetary values have only a solid relationship to monetary values.
+                    One dollar is 100 pennies. or four quarters. The intrinsic value
+                    fluctuates with supply and demand. A dollar will buy what it will
+                    buy today, which is different from yesterday, and it will change
+                    tomorrow. It is very hard to explain what a dollar means. It can
+                    literally change in minutes. Hopefully, a meter will stay a meter
+                    without deviation.
+                </p>
+                <p class="centerText">
+                    <strong>Velocity</strong> is the <i>integration</i> of
+                    distance with respect to time (distance * time) through a vector
+                    (direction (x,y,z)). <strong>Acceloration</strong> is the derivative
+                    (rate of change) of velocity. Kinetic <strong>force</strong> (motion
+                    force) only occurs with acceloration. <strong>Force</strong> equals
+                    mass times the <i>first derivative of velocity,</i> or
+                    acceloration.
 
-    table {
-        margin-top: 0%;
-        margin-bottom: 0%;
-        margin-left: 6%;
-        border-collapse: separate;
-        border-spacing: 2vw;
-        width: 75%;
-        height: 85%;
-    }
+                <table id='table' class='table'>
+                    <tr>
+                        <th id="conversions" class="cellBorder"><img src="/conversion.jpg"></th>
+                        <th id="elastic" class="cellBorder"><img src="/elastic.jpg"></th>
+                        <th id="gravitation" class="cellBorder"><img src="/gravitation.jpg"></th>
+                    </tr>
+                    <tr>
+                        <th id="ballistics" class="cellBorder"><img src="/ballistics.jpg"></th>
+                        <th id="electric" class="cellBorder"><img src="/electric.jpg"></th>
+                        <th id="equations" class="cellBorder"><img src="/equations.jpg"></th>
+                    </tr>
+                </table>
 
-    th, td {
-        color: white;
-        height: 1.2vw;
-    }
-</style>
+                <button type="button" id='login'>Log-in</button>
+                <button id="messages" type="button" onclick="startMessageBoard()">Messages</button>
+                <button type="button" id='newUser'>New User</button>
 
-<div class="center">
-    <p class="centerText">
-        All matter and energy require a shared perspective to quantize
-        parameters. Without a common perspective, value or quantity
-        becomes abstract and meaningless. A good example would be money.
-        Monetary values have only a solid relationship to monetary values.
-        One dollar is 100 pennies. or four quarters. The intrinsic value
-        fluctuates with supply and demand. A dollar will buy what it will
-        buy today, which is different from yesterday, and it will change
-        tomorrow. It is very hard to explain what a dollar means. It can
-        literally change in minutes. Hopefully, a meter will stay a meter
-        without deviation.
-    </p>
-    <p class="centerText">
-        <strong>Velocity</strong> is the <i>integration</i> of
-        distance with respect to time (distance * time) through a vector
-        (direction (x,y,z)). <strong>Acceloration</strong> is the derivative
-        (rate of change) of velocity. Kinetic <strong>force</strong> (motion
-        force) only occurs with acceloration. <strong>Force</strong> equals
-        mass times the <i>first derivative of velocity,</i> or
-        acceloration.
+            </div>
 
-        <table id='table' class='table'>
-            <tr>
-                <th id="conversions" class="cellBorder"><img src="/conversion.jpg"></th>
-                <th id="elastic" class="cellBorder"><img src="/elastic.jpg"></th>
-                <th id="gravitation" class="cellBorder"><img src="/gravitation.jpg"></th>
-            </tr>
-            <tr>
-                <th id="ballistics" class="cellBorder"><img src="/ballistics.jpg"></th>
-                <th id="electric" class="cellBorder"><img src="/electric.jpg"></th>
-                <th id="equations" class="cellBorder"><img src="/equations.jpg"></th>
-            </tr>
-        </table>
-
-        <button id = "login" type="button">Log-in</button>
-        <button type="button" onclick="startMessageBoard()">Messages</button>
-        <button id = "newUser" type="button">New User</button>
-</div>
-
-<div class="right">
-    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=amzn_firetv_eg_101618&banner=07Z1A8KKG3NGABM31PG2&f=ifr&lc=pf4&linkID=e549d7e4904476258ac55247376fca67&t=interactiveph-20&tracking_id=interactiveph-20" width="280" height="233" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=hotnewreleases&banner=00GP90RCZFRVTGTTPT02&f=ifr&lc=pf4&linkID=92490e2a93a3fa075ca128cb97e834e0&t=interactiveph-20&tracking_id=interactiveph-20" width="280" height="233" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-    <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=textbooks&banner=1NWP9RHBJNE6K3EB85R2&f=ifr&lc=pf4&linkID=54d754e6ee0b77dc09ea0a8375f06297&t=interactiveph-20&tracking_id=interactiveph-20" width="280" height="233" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-</div>
+            <div class="right">
+                <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=amzn_firetv_eg_101618&banner=07Z1A8KKG3NGABM31PG2&f=ifr&lc=pf4&linkID=e549d7e4904476258ac55247376fca67&t=interactiveph-20&tracking_id=interactiveph-20" width="280" height="233" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=hotnewreleases&banner=00GP90RCZFRVTGTTPT02&f=ifr&lc=pf4&linkID=92490e2a93a3fa075ca128cb97e834e0&t=interactiveph-20&tracking_id=interactiveph-20" width="280" height="233" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=textbooks&banner=1NWP9RHBJNE6K3EB85R2&f=ifr&lc=pf4&linkID=54d754e6ee0b77dc09ea0a8375f06297&t=interactiveph-20&tracking_id=interactiveph-20" width="280" height="233" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            </div>
+        </div>
+    </body>
+</page>
 
 <script>
+    document.getElementById('newUser').style.opacity = "0.3";
+    document.getElementById('login').style.opacity = "0.3";
     document.getElementsByClassName("left").height = window.innerHeight;
     document.getElementsByClassName("center").height = window.innerHeight;
     document.getElementsByClassName("right").height = window.innerHeight;
@@ -107,6 +89,10 @@
     document.getElementById("electric").addEventListener("click", startElectric);
     document.getElementById("equations").addEventListener("click", startEquations);
 
-    document.getElementById("login").style.opacity = "0.3";
-    document.getElementById("newUser").style.opacity = "0.3";
+    document.getElementById("messages").style.opacity = "1";
+
+    function store()
+    {
+        sessionStorage.setItem('userName', document.getElementById('uname').value);
+    }
 </script>

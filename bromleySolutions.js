@@ -53,3 +53,7 @@ function newUser() {
 function grabLogin() {
     document.getElementById('login').style.display = 'block';
 }
+
+function can() {
+    window.open('/','_self');
+}
