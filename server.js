@@ -27,7 +27,6 @@ app.use(express.urlencoded({extended:false}));
       cert: fs.readFileSync('cert/physics-apps_com.crt'),
       ca: fs.readFileSync('cert/physics-apps_com.ca-bundle')
     };
-<<<<<<< HEAD
     
 var httpServer = http.createServer(function (req,res) 
 {
@@ -37,14 +36,6 @@ var httpServer = http.createServer(function (req,res)
 
 var httpsServer = https.createServer(options, app);
 
-=======
-
-var httpServer = http.createServer(options, app);
-
-var httpsServer = https.createServer(options, app);
-
-httpServer.listen(3000);
->>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
 httpsServer.listen(443);
 
 
@@ -81,15 +72,9 @@ function connect()
         user: 'doadmin',
         password: 'qa9alu83yfgxpw0h',
         database: 'bromleySolutions',
-<<<<<<< HEAD
         port: '25060',
         ssl: {
             ca:fs.readFileSync(__dirname + '/bin/ca-certificate.crt').toString()
-=======
-        port: 25060,
-        ssl: {
-            ca: fs.readFileSync(__dirname + '/cert/ca-certificate.crt').toString()
->>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
         }
    });
 
@@ -104,33 +89,23 @@ function connect()
  * 
  *************************************************************************************************************************/
 
-<<<<<<< HEAD
 //app.listen(443);
 
-=======
->>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
 app.get('/', function(request,response)
 {
     response.sendFile(__dirname + '/index.html');
 });
 
-<<<<<<< HEAD
 /*************************************************************************************************************************
  *                  LOGIN
  * 
  * **********************************************************************************************************************/
-=======
->>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
 app.post('/login', function (request, response){
     connect();
      
     con.query(`SELECT * FROM contacts WHERE userName='${request.body.uname}' AND psw='${request.body.psw}'`, function (err, result) 
      {
-<<<<<<< HEAD
           if (err || result[0].length == 0) 
-=======
-          if (err || result == 0) 
->>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
           {
                console.log(err + " Login failure");
                response.send("log-in failed.");
