@@ -22,20 +22,28 @@ app = express();
 app.use(express.static('.'));
 app.use(express.urlencoded({extended:false}));
 
+ var options = {
+     key: fs.readFileSync('cert/privateKey'),
+      cert: fs.readFileSync('cert/physics-apps_com.crt'),
+      ca: fs.readFileSync('cert/physics-apps_com.ca-bundle')
+    };
+    
+var httpServer = http.createServer(function (req,res) 
+{
+    res.writeHead(301, {location: 'https://physics-apps.com'});
+    res.end();
+}).listen(80);
+
+var httpsServer = https.createServer(options, app);
+
+httpsServer.listen(443);
+
+
 let user = {
     IP: '172.36.158.24',
     name: 'Dick',
     authorize: false
 };
-/*************************************************************************************************************************
- * 
- * 
- * 
- *************************************************************************************************************************/
-
-app.listen(8080, function () {
-  console.log('app listening on port 8080');
-});
 /*************************************************************************************************************************
  * 
  *                                     Express Error Middlewear
@@ -60,21 +68,20 @@ function connect()
 {
      con = mysql.createConnection(
     {
-        host: '174.69.163.24',
-        user: 'root',
-        password: 'Quest@8880',
+        host: 'bromleysolutions-do-user-8864229-0.b.db.ondigitalocean.com',
+        user: 'doadmin',
+        password: 'qa9alu83yfgxpw0h',
         database: 'bromleySolutions',
-        port: 3306,
-     // this object will be passed to the TLSSocket constructor
-     //ssl: {
-     //  ca: fs.readFileSync(__dirname + '/bin/ca-certificate.crt').toString()
-     //}
+        port: '25060',
+        ssl: {
+            ca:fs.readFileSync(__dirname + '/bin/ca-certificate.crt').toString()
+        }
    });
 
-    con.connect(function(err) {
+   /*  con.connect(function(err) {
     if (err) throw err;
     console.log("SQL Server Connected!");
-    });
+    });  */
 }
 /*************************************************************************************************************************
  * 
@@ -82,12 +89,23 @@ function connect()
  * 
  *************************************************************************************************************************/
 
+//app.listen(443);
+
+app.get('/', function(request,response)
+{
+    response.sendFile(__dirname + '/index.html');
+});
+
+/*************************************************************************************************************************
+ *                  LOGIN
+ * 
+ * **********************************************************************************************************************/
 app.post('/login', function (request, response){
     connect();
      
     con.query(`SELECT * FROM contacts WHERE userName='${request.body.uname}' AND psw='${request.body.psw}'`, function (err, result) 
      {
-          if (err || result.length == 0) 
+          if (err || result[0].length == 0) 
           {
                console.log(err + " Login failure");
                response.send("log-in failed.");
@@ -116,6 +134,7 @@ app.post('/form', function (request, response){
     
     if (xmlFile.length < 6000) 
     {
+        
         let content = "<topic>" + '\r\n' + "  <date>" + Date() + "</date>" + '\r\n' +
             "  <category>" + request.body.topic + "</category>" + '\r\n' + "  <message>" + request.body.message +
             "</message>" + '\r\n' + "  <author>" + request.body.uname + "</author>" + '\r\n' +
@@ -146,9 +165,9 @@ app.post('newuser', async function (request, response)
         '${request.body.lname}', '${request.body.email}', '${request.body.uname}', '${request.body.psw}',0)`;
 
         var con = mysql.createConnection({
-        host: "localhost",
+        host: "174.69.163.24",
         user: "root",
-        password: "Quest@8880",
+        password: "ZXCzxc890*()",
         database: "bromleySolutions",
         insecureAuth: true
     });
