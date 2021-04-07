@@ -5,6 +5,7 @@
   <category>General</category>
   <message>Welcome to the general topics message board.</message>
   <author>Richard Bromley</author>
+<<<<<<< HEAD
 </topic><topic>
   <date>Wed Apr 07 2021 05:23:37 GMT-0700 (Pacific Daylight Time)</date>
   <category>General</category>
@@ -15,4 +16,6 @@
   <category>General</category>
   <message>Electric fields in any form doesn't seem to affect a view of something.</message>
   <author>dickbrmly</author>
+=======
+>>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
 </topic></topics>
