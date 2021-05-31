@@ -5,9 +5,15 @@
   <category>Electricity</category>
   <message>Welcome to the electricity message board.</message>
   <author>Richard Bromley</author>
-<<<<<<< HEAD
-  </topic>></topics>
-=======
-  </topic>
-</topics>
->>>>>>> e04f3f19abceca08c4c5eb3e15de3c28817e6685
+  </topic>>
+<topic>
+  <date>Wed Apr 07 2021 16:34:20 GMT-0700 (Pacific Daylight Time)</date>
+  <category>Electricity</category>
+  <message>You can charge glass rods, enough to even repel one another.  But you cannot change iron, but it can hold a magnetic field enough to repel one another.  One allows light to pass and the other doesn't.  Why?</message>
+  <author>dickbrmly</author>
+</topic><topic>
+  <date>Wed Apr 07 2021 17:00:30 GMT-0700 (Pacific Daylight Time)</date>
+  <category>Electricity</category>
+  <message>If we charge an object, the atoms should repel each other.  Does the object get bigger?</message>
+  <author>dickbrmly</author>
+</topic></topics>
